@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: ublue-os/startingpoint
+  - label: m0ngr31/cabos
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: startingpoint
+      - label: CABOs
