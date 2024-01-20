@@ -1,0 +1,4 @@
+type: files
+files:
+  - usr: /usr
+  - etc: /etc

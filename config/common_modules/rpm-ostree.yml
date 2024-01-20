@@ -1,0 +1,38 @@
+type: rpm-ostree
+repos:
+  - https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-%OS_VERSION%/kylegospo-system76-scheduler-fedora-%OS_VERSION%.repo
+  - https://copr.fedorainfracloud.org/coprs/szydell/system76/repo/fedora-%OS_VERSION%/szydell-system76-fedora-%OS_VERSION%.repo
+  - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
+
+install:
+  - gnome-shell-extension-caffeine
+  - system76-scheduler
+  - gnome-shell-extension-system76-scheduler
+  - system76-power
+  - android-tools
+  - nerd-fonts
+  - zsh
+  - gnome-boxes
+  - code
+  - docker-ce
+  - docker-ce-cli
+  - docker-buildx-plugin
+  - docker-compose-plugin
+  - containerd.io
+  - p7zip
+  - p7zip-plugins
+  - podman-compose
+  - podman-plugins
+  - podman-tui
+  - podmansh
+  - playerctl
+  - nautilus-gsconnect
+  - gnome-shell-extension-gsconnect
+  - python3-pip
+  - samba
+  - samba-dcerpc
+  - samba-ldb-ldap-modules
+  - samba-winbind-clients
+  - samba-winbind-modules
+  - konsole
+  - libvirt
