@@ -11,4 +11,3 @@ system:
 user:
   enabled:
     - podman.socket
-    - docker.socket
