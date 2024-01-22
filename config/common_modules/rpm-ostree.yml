@@ -38,3 +38,18 @@ install:
   - samba-winbind-clients
   - samba-winbind-modules
   - libvirt
+
+remove:
+  - firefox
+  - firefox-langpacks
+  - htop
+  - nvtop
+  - gnome-software-rpm-ostree
+  - gnome-tour
+  - gnome-initial-setup
+  - gnome-system-monitor
+  - gnome-shell-extension-apps-menu
+  - gnome-shell-extension-launch-new-instance
+  - gnome-shell-extension-places-menu
+  - gnome-shell-extension-window-list
+  - gnome-classic-session

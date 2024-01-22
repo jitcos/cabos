@@ -48,5 +48,6 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "diffEditor.codeLens": true
+    "diffEditor.codeLens": true,
+    "window.titleBarStyle": "custom"
 }
