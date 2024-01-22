@@ -17,7 +17,7 @@ cd ..
 
 git clone https://github.com/theychx/WorkspaceSwitcherWrapAround.git
 mkdir /usr/share/gnome-shell/extensions/WorkspaceSwitcherWrapAround
-cp WorkspaceSwitcherWrapAround/src* /usr/share/gnome-shell/extensions/WorkspaceSwitcherWrapAround
+cp WorkspaceSwitcherWrapAround/src/* /usr/share/gnome-shell/extensions/WorkspaceSwitcherWrapAround
 
 git clone https://github.com/ethnarque/gnome-disable-workspace-animation.git
 cp -r gnome-disable-workspace-animation/disable-workspace-animation@ethnarque /usr/share/gnome-shell/extensions
