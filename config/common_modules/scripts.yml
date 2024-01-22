@@ -1,4 +1,5 @@
 type: script
 scripts:
   - system76-scheduler.sh
+  - extensions.sh
   - signing.sh

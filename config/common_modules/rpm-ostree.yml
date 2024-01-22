@@ -6,8 +6,12 @@ repos:
 
 install:
   - gnome-shell-extension-caffeine
-  - system76-scheduler
   - gnome-shell-extension-system76-scheduler
+  - gnome-shell-extension-gsconnect
+  - gnome-shell-extension-dash-to-panel
+  - gnome-shell-extension-blur-my-shell
+  - gnome-shell-extension-appindicator
+  - system76-scheduler
   - system76-power
   - android-tools
   - nerd-fonts
@@ -27,7 +31,6 @@ install:
   - podmansh
   - playerctl
   - nautilus-gsconnect
-  - gnome-shell-extension-gsconnect
   - python3-pip
   - samba
   - samba-dcerpc

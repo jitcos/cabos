@@ -1,5 +1,6 @@
 [org/gnome/shell]
 favorite-apps = ['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'code.desktop']
+enabled-extensions=['dash-to-panel@jderose9.github.com', 'blur-my-shell@aunetx', 'gsconnect@andyholmes.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 's76-scheduler@mattjakeman.com', 'caffeine@patapon.info', 'arcmenu@arcmenu.com', 'workspace-switch-wraparound@theychx.org', 'disable-workspace-animation@ethnarque', 'disable-workspace-switcher-overlay@cleardevice']
 
 [org/gnome/mutter]
 workspaces-only-on-primary = false
@@ -40,3 +41,14 @@ text-scaling-factor = 1.25
 
 [org/gnome/mutter]
 experimental-features=['scale-monitor-framebuffer']
+
+[org/gnome/shell/extensions/arcmenu]
+arc-menu-icon = 29
+custom-menu-icon-button-size = 30
+menu-layout = 'Eleven'
+power-options = [(0, true), (1, true), (2, true), (4, true), (6, true), (3, true), (5, false), (7, false)]
+
+[org/gnome/shell/extensions/dash-to-panel]
+hide-overview-on-startup = true
+isolate-workspaces = true
+panel-element-positions = {"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}
