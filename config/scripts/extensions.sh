@@ -12,6 +12,8 @@ cd /tmp
 
 git clone https://github.com/theychx/WorkspaceSwitcherWrapAround.git /usr/share/gnome-shell/extensions/workspace-switch-wraparound@theychx.org
 
+git clone https://github.com/akiirui/hide-universal-access.git /usr/share/gnome-shell/extensions/hide-universal-access@akiirui.github.io
+
 git clone https://github.com/ethnarque/gnome-disable-workspace-animation.git
 cp -r gnome-disable-workspace-animation/disable-workspace-animation@ethnarque /usr/share/gnome-shell/extensions
 

@@ -11,18 +11,16 @@ system:
     - org.gnome.Contacts
     - org.gnome.clocks
     - org.gnome.Evince
-    - org.gnome.Maps
     - org.gnome.TextEditor
+    - org.gnome.Loupe
     - com.github.neithern.g4music
     - com.github.rafostar.Clapper
-    - org.gnome.Loupe
     - io.missioncenter.MissionCenter
     - com.vixalien.sticky
     - com.github.tchx84.Flatseal
     - io.github.fabrialberio.pinapp
     - com.mattjakeman.ExtensionManager
-    - io.podman_desktop.PodmanDesktop
-    - com.uploadedlobster.peek
+    - sa.sy.bluerecorder
     - org.mozilla.firefox
 user:
   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo

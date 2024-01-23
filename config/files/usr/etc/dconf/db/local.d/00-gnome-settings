@@ -1,6 +1,6 @@
 [org/gnome/shell]
 favorite-apps = ['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'code.desktop']
-enabled-extensions=['dash-to-panel@jderose9.github.com', 'blur-my-shell@aunetx', 'gsconnect@andyholmes.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 's76-scheduler@mattjakeman.com', 'caffeine@patapon.info', 'arcmenu@arcmenu.com', 'workspace-switch-wraparound@theychx.org', 'disable-workspace-animation@ethnarque', 'disable-workspace-switcher-overlay@cleardevice']
+enabled-extensions=['hide-universal-access@akiirui.github.io', 'dash-to-panel@jderose9.github.com', 'blur-my-shell@aunetx', 'gsconnect@andyholmes.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 's76-scheduler@mattjakeman.com', 'caffeine@patapon.info', 'arcmenu@arcmenu.com', 'workspace-switch-wraparound@theychx.org', 'disable-workspace-animation@ethnarque', 'disable-workspace-switcher-overlay@cleardevice']
 
 [org/gnome/mutter]
 workspaces-only-on-primary = false
