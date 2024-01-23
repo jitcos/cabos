@@ -10,6 +10,7 @@ dynamic-workspaces = false
 current-workspace-only = false
 
 [org/gnome/desktop/wm/preferences]
+button-layout=":minimize,maximize,close"
 num-workspaces = 4
 
 [org/gnome/desktop/wm/keybindings]
@@ -38,6 +39,18 @@ night-light-enabled = true
 
 [org/gnome/desktop/interface]
 text-scaling-factor = 1.25
+
+[org/gnome/software]
+allow-updates=false
+download-updates=false
+download-updates-notify=false
+packaging-format-preference=['flatpak:flathub-user']
+
+[org/gtk/gtk4/settings/file-chooser]
+sort-directories-first=true
+
+[org/gtk/settings/file-chooser]
+sort-directories-first=true
 
 [org/gnome/mutter]
 experimental-features=['scale-monitor-framebuffer']

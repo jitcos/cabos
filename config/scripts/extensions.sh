@@ -11,6 +11,7 @@ echo 'Installing extensions'
 cd /tmp
 
 git clone https://github.com/theychx/WorkspaceSwitcherWrapAround.git /usr/share/gnome-shell/extensions/workspace-switch-wraparound@theychx.org
+mv /usr/share/gnome-shell/extensions/workspace-switch-wraparound@theychx.org/src/* /usr/share/gnome-shell/extensions/workspace-switch-wraparound@theychx.org
 
 git clone https://github.com/akiirui/hide-universal-access.git /usr/share/gnome-shell/extensions/hide-universal-access@akiirui.github.io
 
@@ -23,5 +24,3 @@ cp -r gnome-disable-workspace-switcher/disable-workspace-switcher-overlay@cleard
 git clone https://gitlab.com/arcmenu/ArcMenu.git
 cd ArcMenu
 make DESTDIR=/ install
-
-dconf update
