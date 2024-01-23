@@ -53,16 +53,9 @@ packaging-format-preference = ['flatpak:flathub-user']
 [org/gnome/mutter]
 experimental-features = ['scale-monitor-framebuffer']
 
-// [org/gnome/shell/extensions/arcmenu]
-// arc-menu-icon = 71
-// custom-menu-icon-button-size = 30
-// menu-layout = 'Eleven'
-// power-options = [(0, true), (1, true), (2, true), (4, true), (6, true), (3, true), (5, false), (7, false)]
+[org/gnome/shell/extensions/dash-to-panel]
+hide-overview-on-startup = true
+isolate-workspaces = true
 
-// [org/gnome/shell/extensions/dash-to-panel]
-// hide-overview-on-startup = true
-// isolate-workspaces = true
-// panel-element-positions = {"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}
-
-// [org/gnome/shell/extensions/gsconnect]
-// enabled = false
+[org/gnome/shell/extensions/gsconnect]
+enabled = false
