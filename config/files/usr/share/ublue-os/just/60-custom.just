@@ -52,9 +52,8 @@ hibernate ACTION="prompt":
 
   sudo mkdir -p "$(dirname "$HIBERNATION_SETUP_VER_FILE")" || exit 1
 
-  # Run script if updated
   if [[ -f $HIBERNATION_SETUP_VER_FILE && "$HIBERNATION_SETUP_VER" = "$HIBERNATION_SETUP_VER_RAN" ]]; then
-    echo "Hibernation setup has already run. Exiting..."
+    echo "Hibernation step 1 has already run. Exiting..."
     exit 0
   fi
 
@@ -77,6 +76,32 @@ hibernate ACTION="prompt":
   sudo semanage fcontext -a -t swapfile_t '/var/swap(/.*)?'
   sudo restorecon -RF /var/swap
 
+  echo "$HIBERNATION_SETUP_VER" | sudo tee "$HIBERNATION_SETUP_VER_FILE"
+  echo "Please run 'systemctl reboot', and then 'just hibernate_finish' to complete the setup."
+
+hibernate_finish ACTION="prompt":
+  #!/usr/bin/env bash
+
+  HIBERNATION_SETUP_VER=1
+  HIBERNATION_SETUP_VER_FILE="/etc/ublue/hibernation"
+  HIBERNATION_SETUP_VER_RAN=$(cat "$HIBERNATION_SETUP_VER_FILE")
+
+  sudo mkdir -p "$(dirname "$HIBERNATION_SETUP_VER_FILE")" || exit 1
+
+  if [[ ! -f $HIBERNATION_SETUP_VER_FILE || "$HIBERNATION_SETUP_VER" != "$HIBERNATION_SETUP_VER_RAN" ]]; then
+    echo "Initial hibernation step has not run. Please run that first. Exiting..."
+    exit 0
+  fi
+
+  HIBERNATION_SETUP2_VER=1
+  HIBERNATION_SETUP2_VER_FILE="/etc/ublue/hibernation_finish"
+  HIBERNATION_SETUP2_VER_RAN=$(cat "$HIBERNATION_SETUP2_VER")
+
+  if [[ -f $HIBERNATION_SETUP2_VER_FILE && "$HIBERNATION_SETUP2_VER" = "$HIBERNATION_SETUP2_VER_RAN" ]]; then
+    echo "Hibernation finish script has already run. Exiting..."
+    exit 0
+  fi
+
   cd /tmp
 
   sudo audit2allow -b -M systemd_hibernate
@@ -94,4 +119,4 @@ hibernate ACTION="prompt":
   echo 'HandleLidSwitch=suspend-then-hibernate' | sudo tee -a /etc/systemd/logind.conf
   echo 'HandleLidSwitchExternalPower=suspend-then-hibernate' | sudo tee -a /etc/systemd/logind.conf
 
-  echo "$HIBERNATION_SETUP_VER" | sudo tee "$HIBERNATION_SETUP_VER_FILE"
+  echo "$HIBERNATION_SETUP2_VER" | sudo tee "$HIBERNATION_SETUP2_VER_FILE"
