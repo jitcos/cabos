@@ -52,4 +52,5 @@ remove:
   - gnome-shell-extension-launch-new-instance
   - gnome-shell-extension-places-menu
   - gnome-shell-extension-window-list
+  - gnome-extensions-app
   - gnome-classic-session
