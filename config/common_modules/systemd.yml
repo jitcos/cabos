@@ -6,7 +6,6 @@ system:
     - com.system76.PowerDaemon.service
     - system76-power-wake.service
     - com.system76.Scheduler.service
-    - dconf-update.service
     - dx-groups.service
   masked:
     - power-profiles-daemon.service
@@ -14,3 +13,4 @@ user:
   enabled:
     - podman.socket
     - dx-user-vscode.service
+    - dx-user-gsettings.service

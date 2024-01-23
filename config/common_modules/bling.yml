@@ -1,6 +1,5 @@
 type: bling
 install:
   - dconf-update-service
-  - ublue-os-wallpapers
   - ublue-update
   - container-tools
