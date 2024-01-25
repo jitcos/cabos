@@ -70,7 +70,7 @@ enable-hibernate ACTION="prompt":
   uuid_variable=$(sudo findmnt -no UUID -T /var/swap/swapfile) > /dev/null 2>&1
   swap_offset=$(sudo btrfs inspect-internal map-swapfile -r /var/swap/swapfile) > /dev/null 2>&1
 
-  echo 'Adding resume to Kernel arguments'
+  echo 'Adding resume to kernel arguments'
   sudo rpm-ostree kargs --append="resume=UUID=$uuid_variable resume_offset=$swap_offset" > /dev/null 2>&1
 
   echo 'Adding swap to /etc/fstab'
@@ -138,5 +138,5 @@ enable-hibernate ACTION="prompt":
   echo "$HIBERNATE_PLYMOUTH" | sudo tee /etc/pm/sleep.d/00_plymouth > /dev/null
   sudo chmod +x /etc/pm/sleep.d/00_plymouth > /dev/null 2>&1
 
-  echo "$HIBERNATION_SETUP_VER" | sudo tee "$HIBERNATION_SETUP_VER_FILE"
+  echo "$HIBERNATION_SETUP_VER" | sudo tee "$HIBERNATION_SETUP_VER_FILE" > /dev/null
   echo 'All done! Please reboot to enable the changes.'

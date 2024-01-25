@@ -1,11 +1,11 @@
-title: Welcome to CABOs
+title: Welcome to cabos
 properties:
   mode: "run-on-change"
 screens:
   first-screen:
     source: yafti.screen.title
     values:
-      title: "Welcome to CABOs"
+      title: "Welcome to cabos"
       icon: "/path/to/icon"
       description: |
         This guided installer will help you get started with your new system.
@@ -84,7 +84,7 @@ screens:
           description: Development tools and IDEs.
           default: false
           packages:
-            - Android Studio: com.google.AndroidStudio
+            - Builder: org.gnome.Builder
             - PyCharm (Community): com.jetbrains.PyCharm-Community
             - PyCharm (Professional): com.jetbrains.PyCharm-Professional
             - IntelliJ IDEA (Community): com.jetbrains.IntelliJ-IDEA-Community
@@ -94,6 +94,7 @@ screens:
             - Rider: com.jetbrains.Rider
             - CLion: com.jetbrains.CLion
             - GoLand: com.jetbrains.GoLand
+            - Android Studio: com.google.AndroidStudio
             - Sublime Text: com.sublimetext.three
             - Insomnia: rest.insomnia.Insomnia
             - Postman: com.getpostman.Postman
@@ -166,4 +167,4 @@ screens:
         - "Install More Applications":
             run: /usr/bin/gnome-software
       description: |
-        Thanks for trying CABOs, we hope you enjoy it!
+        Thanks for trying cabos, we hope you enjoy it!

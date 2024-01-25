@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # SCRIPT VERSION
-USER_SETUP_VER=1
+USER_SETUP_VER=2
 USER_SETUP_VER_FILE="${XDG_DATA_HOME:-$HOME/.local/share}/cabos/gsettings-configured"
 USER_SETUP_VER_RAN=$(cat "$USER_SETUP_VER_FILE")
 
@@ -61,6 +61,23 @@ gsettings set org.gnome.shell.extensions.dash-to-panel hide-overview-on-startup 
 gsettings set org.gnome.shell.extensions.dash-to-panel isolate-workspaces true
 
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
+
+# Terminal theme
+PROFILE_UUID=$(uuidgen)
+
+gsettings set org.gnome.Terminal.ProfilesList list "$(gsettings get org.gnome.Terminal.ProfilesList list | sed "s/]/, '$PROFILE_UUID']/")"
+
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/audible-bell" false
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/background-color" "'#3C3C4C4C5555'"
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/bold-color-same-as-fg" true
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/font" "'FiraMono Nerd Font 12'"
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/foreground-color" "'#C5C5D4D4DDDD'"
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/palette" "['rgb(60, 76, 85)', 'rgb(223, 140, 140)', 'rgb(168, 206, 147)', 'rgb(218, 218, 147)', 'rgb(131, 175, 229)', 'rgb(154, 147, 225)', 'rgb(127, 193, 202)', 'rgb(197, 212, 221)', 'rgb(137, 155, 166)', 'rgb(242, 195, 143)', 'rgb(168, 206, 147)', 'rgb(218, 218, 147)', 'rgb(131, 175, 229)', 'rgb(209, 142, 194)', 'rgb(127, 193, 202)', 'rgb(230, 238, 243)']"
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/use-system-font" false
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/use-theme-colors" false
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/visible-name" "'Lucid'"
+
+gsettings set org.gnome.Terminal.ProfilesList default "'$PROFILE_UUID'"
 
 # Prevent future executions
 echo "Writing state file"

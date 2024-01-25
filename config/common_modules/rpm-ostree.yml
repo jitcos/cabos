@@ -3,6 +3,7 @@ repos:
   - https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-%OS_VERSION%/kylegospo-system76-scheduler-fedora-%OS_VERSION%.repo
   - https://copr.fedorainfracloud.org/coprs/szydell/system76/repo/fedora-%OS_VERSION%/szydell-system76-fedora-%OS_VERSION%.repo
   - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
+  - https://copr.fedorainfracloud.org/coprs/kylegospo/prompt/repo/fedora-%OS_VERSION%/kylegospo-prompt-fedora-%OS_VERSION%.repo
 
 install:
   - gnome-shell-extension-caffeine
@@ -18,6 +19,9 @@ install:
   - zsh
   - gnome-boxes
   - code
+  - prompt
+  - vte291
+  - vte-profile
   - docker-ce
   - docker-ce-cli
   - docker-buildx-plugin
@@ -53,3 +57,4 @@ remove:
   - gnome-shell-extension-places-menu
   - gnome-shell-extension-window-list
   - gnome-classic-session
+  - gnome-terminal
