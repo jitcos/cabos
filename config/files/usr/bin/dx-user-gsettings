@@ -16,7 +16,7 @@ if [[ -f $USER_SETUP_VER_FILE && "$USER_SETUP_VER" = "$USER_SETUP_VER_RAN" ]]; t
 fi
 
 gsettings set org.gnome.shell favorite-apps "['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.gnome.Terminal.desktop', 'code.desktop']"
-gsettings set org.gnome.shell enabled-extensions "['hide-universal-access@akiirui.github.io', 'dash-to-panel@jderose9.github.com', 'blur-my-shell@aunetx', 'gsconnect@andyholmes.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 's76-scheduler@mattjakeman.com', 'caffeine@patapon.info', 'start-overlay-in-application-view@Hex_cz', 'workspace-switch-wraparound@theychx.org', 'disable-workspace-animation@ethnarque', 'disable-workspace-switcher-overlay@cleardevice', 'background-logo@fedorahosted.org']"
+gsettings set org.gnome.shell enabled-extensions "['hide-universal-access@akiirui.github.io', 'dash-to-panel@jderose9.github.com', 'blur-my-shell@aunetx', 'gsconnect@andyholmes.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 's76-scheduler@mattjakeman.com', 'caffeine@patapon.info', 'start-overlay-in-application-view@Hex_cz', 'workspace-switch-wraparound@theychx.org', 'disable-workspace-animation@ethnarque', 'disable-workspace-switcher-overlay@cleardevice']"
 
 gsettings set org.gnome.mutter workspaces-only-on-primary false
 gsettings set org.gnome.mutter dynamic-workspaces false
@@ -68,16 +68,30 @@ PROFILE_UUID=$(uuidgen)
 gsettings set org.gnome.Terminal.ProfilesList list "$(gsettings get org.gnome.Terminal.ProfilesList list | sed "s/]/, '$PROFILE_UUID']/")"
 
 dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/audible-bell" false
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/background-color" "'#3C3C4C4C5555'"
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/background-color" "'#3d4752'"
 dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/bold-color-same-as-fg" true
 dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/font" "'FiraMono Nerd Font 12'"
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/foreground-color" "'#C5C5D4D4DDDD'"
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/palette" "['rgb(60, 76, 85)', 'rgb(223, 140, 140)', 'rgb(168, 206, 147)', 'rgb(218, 218, 147)', 'rgb(131, 175, 229)', 'rgb(154, 147, 225)', 'rgb(127, 193, 202)', 'rgb(197, 212, 221)', 'rgb(137, 155, 166)', 'rgb(242, 195, 143)', 'rgb(168, 206, 147)', 'rgb(218, 218, 147)', 'rgb(131, 175, 229)', 'rgb(209, 142, 194)', 'rgb(127, 193, 202)', 'rgb(230, 238, 243)']"
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/foreground-color" "'#ffffff'"
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/palette" "['#3d4752','#ff8e7d','#a3d971','#ffdf67','#80bbe7','#f6b4c8','#55bba7','#e6e6e6','#505c6a','#ffc36d','#55bba7','#ffdf67','#80bbe7','#f6b4c8','#55bba7','#ffffff']"
 dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/use-system-font" false
 dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/use-theme-colors" false
 dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/visible-name" "'Lucid'"
 
 gsettings set org.gnome.Terminal.ProfilesList default "'$PROFILE_UUID'"
+
+PROFILE_UUID_LIGHT=$(uuidgen)
+
+gsettings set org.gnome.Terminal.ProfilesList list "$(gsettings get org.gnome.Terminal.ProfilesList list | sed "s/]/, '$PROFILE_UUID']/")"
+
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/audible-bell" false
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/background-color" "'#ffffff'"
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/bold-color-same-as-fg" true
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/font" "'FiraMono Nerd Font 12'"
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/foreground-color" "'#3d4752'"
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/palette" "['#3d4752','#cb2735','#79b63f','#fec31d','#007dbc','#e05c84','#05977d','#e6e6e6','#505c6a','#f28c00','#05977d','#fec31d','#007dbc','#e05c84','#05977d','#ffffff']"
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/use-system-font" false
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/use-theme-colors" false
+dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/visible-name" "'Lucid Light'"
 
 # Prevent future executions
 echo "Writing state file"
