@@ -111,6 +111,7 @@ screens:
           packages:
             - Gimp: org.gimp.GIMP
             - Krita: org.kde.krita
+            - Boxy SVG: com.boxy_svg.BoxySVG
             - Inkscape: org.inkscape.Inkscape
             - Figma: io.github.Figma_Linux.figma_linux
             - PrusaSlicer: com.prusa3d.PrusaSlicer

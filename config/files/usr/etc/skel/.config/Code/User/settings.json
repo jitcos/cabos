@@ -43,5 +43,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "diffEditor.codeLens": true,
-    "window.titleBarStyle": "custom"
+    "window.titleBarStyle": "custom",
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.enabled": false
 }

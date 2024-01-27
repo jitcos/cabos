@@ -43,14 +43,15 @@ configure-grub ACTION="prompt":
     fi
   fi
 
-enable-hibernate ACTION="prompt":
+enable-hibernation:
   #!/usr/bin/env bash
 
-  HIBERNATION_SETUP_VER=1
+  HIBERNATION_SETUP_VER=2
   HIBERNATION_SETUP_VER_FILE="/etc/ublue/hibernation"
-  HIBERNATION_SETUP_VER_RAN=$(cat "$HIBERNATION_SETUP_VER_FILE")
 
   sudo mkdir -p "$(dirname "$HIBERNATION_SETUP_VER_FILE")" || exit 1
+
+  HIBERNATION_SETUP_VER_RAN=$(cat "$HIBERNATION_SETUP_VER_FILE")
 
   if [[ -f $HIBERNATION_SETUP_VER_FILE && "$HIBERNATION_SETUP_VER" = "$HIBERNATION_SETUP_VER_RAN" ]]; then
     echo "Hibernation is already setup. Exiting..."
@@ -64,21 +65,21 @@ enable-hibernate ACTION="prompt":
   total_memory_gb=$(printf "%.0f" $(echo "scale=2; $total_memory_kb / 1024 / 1024" | bc))
 
   echo 'Creating Swapfile'
-  sudo btrfs subvolume create /var/swap > /dev/null 2>&1
-  sudo btrfs filesystem mkswapfile --size ${total_memory_gb}g --uuid clear /var/swap/swapfile > /dev/null 2>&1
+  sudo btrfs subvolume create /var/swap
+  sudo btrfs filesystem mkswapfile --size ${total_memory_gb}g --uuid clear /var/swap/swapfile
 
-  uuid_variable=$(sudo findmnt -no UUID -T /var/swap/swapfile) > /dev/null 2>&1
-  swap_offset=$(sudo btrfs inspect-internal map-swapfile -r /var/swap/swapfile) > /dev/null 2>&1
+  uuid_variable=$(sudo findmnt -no UUID -T /var/swap/swapfile)
+  swap_offset=$(sudo btrfs inspect-internal map-swapfile -r /var/swap/swapfile)
 
   echo 'Adding resume to kernel arguments'
-  sudo rpm-ostree kargs --append="resume=UUID=$uuid_variable resume_offset=$swap_offset" > /dev/null 2>&1
+  sudo rpm-ostree kargs --append="resume=UUID=$uuid_variable resume_offset=$swap_offset"
 
   echo 'Adding swap to /etc/fstab'
-  echo '/var/swap/swapfile    none    swap    defaults,pri=0 0 0' | sudo tee -a /etc/fstab > /dev/null
-  sudo swapon /var/swap/swapfile > /dev/null 2>&1
+  echo '/var/swap/swapfile    none    swap    defaults,pri=0 0 0' | sudo tee -a /etc/fstab
+  sudo swapon /var/swap/swapfile
 
-  sudo semanage fcontext -a -t swapfile_t '/var/swap(/.*)?' > /dev/null 2>&1
-  sudo restorecon -RF /var/swap > /dev/null 2>&1
+  sudo semanage fcontext -a -t swapfile_t '/var/swap(/.*)?'
+  sudo restorecon -RF /var/swap
 
   cd /tmp
 
@@ -104,20 +105,20 @@ enable-hibernate ACTION="prompt":
   "
 
   # Echo to a file
-  echo "$POLICY_MODULE_CONTENT" > hibernation_modules.te > /dev/null
+  echo "$POLICY_MODULE_CONTENT" > hibernation_modules.te
 
-  checkmodule -M -m -o hibernation_modules.mod hibernation_modules.te > /dev/null 2>&1
-  semodule_package -o hibernation_modules.pp -m hibernation_modules.mod > /dev/null 2>&1
-  sudo semodule -i hibernation_modules.pp > /dev/null 2>&1
+  checkmodule -M -m -o hibernation_modules.mod hibernation_modules.te
+  semodule_package -o hibernation_modules.pp -m hibernation_modules.mod
+  sudo semodule -i hibernation_modules.pp
 
-  echo 'AllowHibernation=yes' | sudo tee -a /etc/systemd/sleep.conf > /dev/null
-  echo 'AllowSuspendThenHibernate=yes' | sudo tee -a /etc/systemd/sleep.conf > /dev/null
-  echo 'HibernateDelaySec=90min' | sudo tee -a /etc/systemd/sleep.conf > /dev/null
-  echo 'HibernateMode=shutdown' | sudo tee -a /etc/systemd/sleep.conf > /dev/null
-  echo 'SuspendEstimationSec=60min' | sudo tee -a /etc/systemd/sleep.conf > /dev/null
+  echo 'AllowHibernation=yes' | sudo tee -a /etc/systemd/sleep.conf
+  echo 'AllowSuspendThenHibernate=yes' | sudo tee -a /etc/systemd/sleep.conf
+  echo 'HibernateDelaySec=90min' | sudo tee -a /etc/systemd/sleep.conf
+  echo 'HibernateMode=shutdown' | sudo tee -a /etc/systemd/sleep.conf
+  echo 'SuspendEstimationSec=60min' | sudo tee -a /etc/systemd/sleep.conf
 
-  echo 'HandleLidSwitch=suspend-then-hibernate' | sudo tee -a /etc/systemd/logind.conf > /dev/null
-  echo 'HandleLidSwitchExternalPower=suspend-then-hibernate' | sudo tee -a /etc/systemd/logind.conf > /dev/null
+  echo 'HandleLidSwitch=suspend-then-hibernate' | sudo tee -a /etc/systemd/logind.conf
+  echo 'HandleLidSwitchExternalPower=suspend-then-hibernate' | sudo tee -a /etc/systemd/logind.conf
 
   HIBERNATE_PLYMOUTH="
   #!/bin/bash
@@ -135,8 +136,8 @@ enable-hibernate ACTION="prompt":
   esac
   "
 
-  echo "$HIBERNATE_PLYMOUTH" | sudo tee /etc/pm/sleep.d/00_plymouth > /dev/null
-  sudo chmod +x /etc/pm/sleep.d/00_plymouth > /dev/null 2>&1
+  echo "$HIBERNATE_PLYMOUTH" | sudo tee /etc/pm/sleep.d/00_plymouth
+  sudo chmod +x /etc/pm/sleep.d/00_plymouth
 
-  echo "$HIBERNATION_SETUP_VER" | sudo tee "$HIBERNATION_SETUP_VER_FILE" > /dev/null
+  echo "$HIBERNATION_SETUP_VER" | sudo tee "$HIBERNATION_SETUP_VER_FILE"
   echo 'All done! Please reboot to enable the changes.'
