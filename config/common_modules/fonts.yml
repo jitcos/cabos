@@ -1,5 +1,6 @@
 - type: fonts
   fonts:
+    nerd-fonts:
     google-fonts:
       - Roboto
       - Open Sans
