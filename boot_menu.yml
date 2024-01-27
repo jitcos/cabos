@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: m0ngr31/cabos
+  - label: jitcos/cabos
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: cabos
