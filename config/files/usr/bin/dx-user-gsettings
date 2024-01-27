@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
 # SCRIPT VERSION
-USER_SETUP_VER=3
+USER_SETUP_VER=4
 USER_SETUP_VER_FILE="${XDG_DATA_HOME:-$HOME/.local/share}/cabos/gsettings-configured"
-USER_SETUP_VER_RAN=$(cat "$USER_SETUP_VER_FILE")
 
 mkdir -p "$(dirname "$USER_SETUP_VER_FILE")" || exit 1
+
+USER_SETUP_VER_RAN=$(cat "$USER_SETUP_VER_FILE")
 
 ## Backup in case local.d config doesn't take for whatever reason
 
@@ -65,24 +66,14 @@ gsettings set org.gnome.shell.app-switcher current-workspace-only true
 gsettings set org.gnome.desktop.session idle-delay 900
 gsettings set org.gnome.desktop.screensaver lock-delay 3600
 
+
+# Prompt theme
 if test ! -e "$HOME"/.local/share/org.gnome.Prompt/palettes/lucid.palette; then
   mkdir -p "$HOME"/.local/share/org.gnome.Prompt/palettes
   cp -f /etc/skel.d/.local/share/org.gnome.Prompt/palettes/lucid.palette "$HOME"/.local/share/org.gnome.Prompt/palettes
 fi
 
-# Terminal theme
-output=$(gsettings get org.gnome.Prompt profile-uuids)
-
-# Extract the UUID using sed and strip single quotes
-PROFILE_UUID=$(echo "$output" | sed "s/[][]//g; s/'//g")
-
-gsettings set org.gnome.Prompt audible-bell false
-gsettings set org.gnome.Prompt visual-bell false
-gsettings set org.gnome.Prompt use-system-font false
-gsettings set org.gnome.Prompt font-name 'Fira Code 10'
-
-dconf write /org/gnome/Prompt/Profiles/$PROFILE_UUID/palette "'lucid'"
-dconf write /org/gnome/Prompt/Profiles/$PROFILE_UUID/label "'Default'"
+dconf load / < /etc/dconf/db/local.d/01-prompt
 
 # Prevent future executions
 echo "Writing state file"
