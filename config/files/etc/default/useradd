@@ -1,0 +1,8 @@
+# useradd defaults file
+GROUP=100
+HOME=/var/home
+INACTIVE=-1
+EXPIRE=
+SHELL=/usr/bin/zsh
+SKEL=/etc/skel
+CREATE_MAIL_SPOOL=yes

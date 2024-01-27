@@ -2,4 +2,3 @@ type: bling
 install:
   - dconf-update-service
   - ublue-update
-  - container-tools

@@ -6,7 +6,7 @@ screens:
     source: yafti.screen.title
     values:
       title: "Welcome to cabos"
-      icon: "/path/to/icon"
+      icon: "/usr/share/cabos/cabos-logo-blue.svg"
       description: |
         This guided installer will help you get started with your new system.
   can-we-modify-your-flatpaks:
@@ -143,8 +143,8 @@ screens:
           description: Boost your productivity.
           default: false
           packages:
-            - LibreOffice: org.libreoffice.LibreOffice
             - OnlyOffice: org.onlyoffice.desktopeditors
+            - LibreOffice: org.libreoffice.LibreOffice
             - Obsidian: md.obsidian.Obsidian
             - Standard Notes: org.standardnotes.standardnotes
             - Thunderbird Email: org.mozilla.Thunderbird
@@ -162,7 +162,7 @@ screens:
     source: yafti.screen.title
     values:
       title: "All done!"
-      icon: "/path/to/icon"
+      icon: "/usr/share/cabos/cabos-logo-blue.svg"
       links:
         - "Install More Applications":
             run: /usr/bin/gnome-software

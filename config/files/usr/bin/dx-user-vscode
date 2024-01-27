@@ -17,7 +17,6 @@ fi
 # Pre-install preferred VSCode Extensions
 code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-azuretools.vscode-docker
-code --install-extension trongthanh.theme-boxythemekit
 code --install-extension EditorConfig.EditorConfig
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension drKnoxy.eslint-disable-snippets

@@ -1,15 +1,9 @@
 {
-    "workbench.colorCustomizations": {
-        "sideBar.background": "#3c4c55cc",
-        "activityBar.background": "#3c4c55",
-        "activityBar.foreground": "#fff",
-        "activityBarBadge.background": "#ec5f67cc"
-    },
     "editor.fontLigatures": true,
-    "editor.fontFamily": "FiraCode Nerd Font",
+    "editor.fontFamily": "Fira Code",
     "editor.tabSize": 2,
     "telemetry.telemetryLevel": "off",
-    "workbench.colorTheme": "Boxy Nova",
+    "workbench.colorTheme": "Lucid Dark",
     "files.trimTrailingWhitespace": true,
     "extensions.ignoreRecommendations": false,
     "git.confirmSync": false,

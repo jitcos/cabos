@@ -22,6 +22,7 @@ system:
     - com.mattjakeman.ExtensionManager
     - sa.sy.bluerecorder
     - org.mozilla.firefox
+    - it.mijorus.gearlever
 user:
   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub-user

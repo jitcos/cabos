@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # SCRIPT VERSION
-USER_SETUP_VER=2
+USER_SETUP_VER=3
 USER_SETUP_VER_FILE="${XDG_DATA_HOME:-$HOME/.local/share}/cabos/gsettings-configured"
 USER_SETUP_VER_RAN=$(cat "$USER_SETUP_VER_FILE")
 
@@ -15,7 +15,7 @@ if [[ -f $USER_SETUP_VER_FILE && "$USER_SETUP_VER" = "$USER_SETUP_VER_RAN" ]]; t
   exit 0
 fi
 
-gsettings set org.gnome.shell favorite-apps "['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.gnome.Terminal.desktop', 'code.desktop']"
+gsettings set org.gnome.shell favorite-apps "['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'Prompt.desktop', 'code.desktop']"
 gsettings set org.gnome.shell enabled-extensions "['hide-universal-access@akiirui.github.io', 'dash-to-panel@jderose9.github.com', 'blur-my-shell@aunetx', 'gsconnect@andyholmes.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 's76-scheduler@mattjakeman.com', 'caffeine@patapon.info', 'start-overlay-in-application-view@Hex_cz', 'workspace-switch-wraparound@theychx.org', 'disable-workspace-animation@ethnarque', 'disable-workspace-switcher-overlay@cleardevice']"
 
 gsettings set org.gnome.mutter workspaces-only-on-primary false
@@ -63,35 +63,18 @@ gsettings set org.gnome.shell.extensions.dash-to-panel isolate-workspaces true
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
 
 # Terminal theme
-PROFILE_UUID=$(uuidgen)
+output=$(gsettings get org.gnome.Prompt profile-uuids)
 
-gsettings set org.gnome.Terminal.ProfilesList list "$(gsettings get org.gnome.Terminal.ProfilesList list | sed "s/]/, '$PROFILE_UUID']/")"
+# Extract the UUID using sed and strip single quotes
+PROFILE_UUID=$(echo "$output" | sed "s/[][]//g; s/'//g")
 
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/audible-bell" false
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/background-color" "'#3d4752'"
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/bold-color-same-as-fg" true
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/font" "'FiraMono Nerd Font 12'"
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/foreground-color" "'#ffffff'"
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/palette" "['#3d4752','#ff8e7d','#a3d971','#ffdf67','#80bbe7','#f6b4c8','#55bba7','#e6e6e6','#505c6a','#ffc36d','#55bba7','#ffdf67','#80bbe7','#f6b4c8','#55bba7','#ffffff']"
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/use-system-font" false
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/use-theme-colors" false
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/visible-name" "'Lucid'"
+gsettings set org.gnome.Prompt audible-bell false
+gsettings set org.gnome.Prompt visual-bell false
+gsettings set org.gnome.Prompt use-system-font false
+# gsettings set org.gnome.Prompt font-name 'Fira Code 13'
 
-gsettings set org.gnome.Terminal.ProfilesList default "'$PROFILE_UUID'"
-
-PROFILE_UUID_LIGHT=$(uuidgen)
-
-gsettings set org.gnome.Terminal.ProfilesList list "$(gsettings get org.gnome.Terminal.ProfilesList list | sed "s/]/, '$PROFILE_UUID']/")"
-
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/audible-bell" false
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/background-color" "'#ffffff'"
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/bold-color-same-as-fg" true
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/font" "'FiraMono Nerd Font 12'"
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/foreground-color" "'#3d4752'"
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/palette" "['#3d4752','#cb2735','#79b63f','#fec31d','#007dbc','#e05c84','#05977d','#e6e6e6','#505c6a','#f28c00','#05977d','#fec31d','#007dbc','#e05c84','#05977d','#ffffff']"
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/use-system-font" false
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/use-theme-colors" false
-dconf write "/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID_LIGHT/visible-name" "'Lucid Light'"
+dconf write /org/gnome/Prompt/Profiles/$PROFILE_UUID/palette "'lucid'"
+dconf write /org/gnome/Prompt/Profiles/$PROFILE_UUID/label "'Default'"
 
 # Prevent future executions
 echo "Writing state file"

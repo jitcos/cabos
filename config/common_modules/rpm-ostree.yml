@@ -14,18 +14,13 @@ install:
   - system76-scheduler
   - system76-power
   - android-tools
-  - nerd-fonts
   - zsh
   - gnome-boxes
   - code
-  - docker-ce
-  - docker-ce-cli
-  - docker-buildx-plugin
-  - docker-compose-plugin
-  - containerd.io
   - p7zip
   - p7zip-plugins
   - podman-compose
+  - podman-docker
   - podman-plugins
   - podman-tui
   - podmansh
@@ -38,6 +33,15 @@ install:
   - samba-winbind-clients
   - samba-winbind-modules
   - libvirt
+  - qemu-char-spice
+  - qemu-device-display-virtio-gpu
+  - qemu-device-display-virtio-vga
+  - qemu-device-usb-redirect
+  - qemu-img
+  - qemu-system-x86-core
+  - qemu-user-binfmt
+  - qemu-user-static
+  - qemu
 
 remove:
   - firefox
