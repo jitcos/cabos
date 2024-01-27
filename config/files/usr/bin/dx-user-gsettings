@@ -74,7 +74,7 @@ PROFILE_UUID=$(echo "$output" | sed "s/[][]//g; s/'//g")
 gsettings set org.gnome.Prompt audible-bell false
 gsettings set org.gnome.Prompt visual-bell false
 gsettings set org.gnome.Prompt use-system-font false
-# gsettings set org.gnome.Prompt font-name 'Fira Code 13'
+gsettings set org.gnome.Prompt font-name 'Fira Code 10'
 
 dconf write /org/gnome/Prompt/Profiles/$PROFILE_UUID/palette "'lucid'"
 dconf write /org/gnome/Prompt/Profiles/$PROFILE_UUID/label "'Default'"

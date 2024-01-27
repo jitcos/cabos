@@ -12,6 +12,6 @@ if test "$(id -u)" -gt "0" && test -d "$HOME"; then
 
     if test ! -e "$HOME"/.local/share/org.gnome.Prompt/palettes/lucid.palette; then
         mkdir -p "$HOME"/.local/share/org.gnome.Prompt/palettes
-        cp -f /etc/skel.d/.local/share/org.gnome.Prompt/palettes "$HOME"/.local/share/org.gnome.Prompt/palettes
+        cp -f /etc/skel.d/.local/share/org.gnome.Prompt/palettes/lucid.palette "$HOME"/.local/share/org.gnome.Prompt/palettes
     fi
 fi
