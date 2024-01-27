@@ -62,6 +62,9 @@ gsettings set org.gnome.shell.extensions.dash-to-panel isolate-workspaces true
 
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
 
+gsettings set org.gnome.desktop.session idle-delay 900
+gsettings set org.gnome.desktop.screensaver lock-delay 3600
+
 # Terminal theme
 output=$(gsettings get org.gnome.Prompt profile-uuids)
 
