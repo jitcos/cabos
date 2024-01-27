@@ -9,9 +9,4 @@ if test "$(id -u)" -gt "0" && test -d "$HOME"; then
         mkdir -p "$HOME"/.vscode/extensions
         cp -r /etc/skel.d/.vscode/extensions/themer-lucid "$HOME"/.vscode/extensions
     fi
-
-    if test ! -e "$HOME"/.local/share/org.gnome.Prompt/palettes/lucid.palette; then
-        mkdir -p "$HOME"/.local/share/org.gnome.Prompt/palettes
-        cp -f /etc/skel.d/.local/share/org.gnome.Prompt/palettes/lucid.palette "$HOME"/.local/share/org.gnome.Prompt/palettes
-    fi
 fi
