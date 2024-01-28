@@ -12,5 +12,5 @@ rpm-ostree override replace \
       vte291 \
       vte-profile
 rpm-ostree install prompt
-rpm-ostree remove gnome-extensions-app
 rm -f /etc/yum.repos.d/_copr_kylegospo-prompt.repo
+rpm-ostree uninstall gnome-extensions-app
