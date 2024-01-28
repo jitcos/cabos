@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # SCRIPT VERSION
-USER_SETUP_VER=4
+USER_SETUP_VER=5
 USER_SETUP_VER_FILE="${XDG_DATA_HOME:-$HOME/.local/share}/cabos/gsettings-configured"
 
 mkdir -p "$(dirname "$USER_SETUP_VER_FILE")" || exit 1
@@ -54,7 +54,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys previous "['<Alt>comm
 
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 
-gsettings set org.gnome.shell.extensions.gsconnect enabled false
+gsettings set org.gnome.Shell.Extensions.GSConnect enabled false
 
 gsettings set org.gnome.shell.extensions.dash-to-panel hide-overview-on-startup true
 gsettings set org.gnome.shell.extensions.dash-to-panel isolate-workspaces true
@@ -78,3 +78,16 @@ dconf load / < /etc/dconf/db/local.d/01-prompt
 # Prevent future executions
 echo "Writing state file"
 echo "$USER_SETUP_VER" > "$USER_SETUP_VER_FILE"
+
+# Check for hibernation
+HIBERNATION_SETUP_VER_FILE="/etc/ublue/hibernation"
+
+if [[ -f $HIBERNATION_SETUP_VER_FILE ]]; then
+  dconf write /org/gnome/shell/extensions/hibernate-status-button/show-hibernate true
+  dconf write /org/gnome/shell/extensions/hibernate-status-button/show-hybrid-sleep false
+  dconf write /org/gnome/shell/extensions/hibernate-status-button/show-suspend-then-hibernate true
+else
+  dconf write /org/gnome/shell/extensions/hibernate-status-button/show-hibernate false
+  dconf write /org/gnome/shell/extensions/hibernate-status-button/show-hybrid-sleep false
+  dconf write /org/gnome/shell/extensions/hibernate-status-button/show-suspend-then-hibernate false
+fi
