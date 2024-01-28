@@ -45,5 +45,7 @@
     "diffEditor.codeLens": true,
     "window.titleBarStyle": "custom",
     "security.workspace.trust.banner": "never",
-    "security.workspace.trust.enabled": false
+    "security.workspace.trust.enabled": false,
+    "gitlens.showWelcomeOnInstall": false,
+    "gitlens.showWhatsNewAfterUpgrades": false
 }

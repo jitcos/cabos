@@ -42,6 +42,7 @@ gsettings set org.gnome.desktop.background primary-color '7FC1CA'
 gsettings set org.gnome.desktop.background secondary-color '000000'
 
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
+gsettings set org.gnome.desktop.interface color-scheme "'prefer-dark'"
 
 gsettings set org.gnome.software allow-updates false
 gsettings set org.gnome.software download-updates false
