@@ -50,8 +50,8 @@ screens:
       show_terminal: true
       package_manager: yafti.plugin.flatpak
       package_manager_defaults:
-        user: false
-        system: true
+        user: true
+        system: false
       groups:
         Core GNOME Apps:
           description: Core system applications for the GNOME desktop environment.
@@ -99,12 +99,19 @@ screens:
             - Insomnia: rest.insomnia.Insomnia
             - Postman: com.getpostman.Postman
             - Podman Desktop: io.podman_desktop.PodmanDesktop
+            - Meld: org.gnome.meld
         Multimedia:
-          description: Multimedia tools for watching movies, listening to music, and more.
+          description: Multimedia tools for playing and editing media.
           default: false
           packages:
             - Spotify: com.spotify.Client
             - Pithos (Pandora): io.github.Pithos
+            - VLC: org.videolan.VLC
+            - Kdenlive: org.kde.kdenlive
+            - Shotcut: org.shotcut.Shotcut
+            - Flowblade: io.github.jliljebl.Flowblade
+            - OpenShot: org.openshot.OpenShot
+            - Audacity: org.audacityteam.Audacity
         Graphics:
           description: Graphics tools for creating and editing images.
           default: false
