@@ -17,7 +17,7 @@ if [[ -f $USER_SETUP_VER_FILE && "$USER_SETUP_VER" = "$USER_SETUP_VER_RAN" ]]; t
 fi
 
 gsettings set org.gnome.shell favorite-apps "['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.gnome.Prompt.desktop', 'code.desktop']"
-gsettings set org.gnome.shell enabled-extensions "['hide-universal-access@akiirui.github.io', 'dash-to-panel@jderose9.github.com', 'blur-my-shell@aunetx', 'gsconnect@andyholmes.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 's76-scheduler@mattjakeman.com', 'caffeine@patapon.info', 'start-overlay-in-application-view@Hex_cz', 'workspace-switch-wraparound@theychx.org', 'disable-workspace-animation@ethnarque', 'disable-workspace-switcher-overlay@cleardevice']"
+gsettings set org.gnome.shell enabled-extensions "['hide-universal-access@akiirui.github.io', 'dash-to-panel@jderose9.github.com', 'blur-my-shell@aunetx', 'gsconnect@andyholmes.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 's76-scheduler@mattjakeman.com', 'caffeine@patapon.info', 'start-overlay-in-application-view@Hex_cz', 'workspace-switch-wraparound@theychx.org', 'disable-workspace-animation@ethnarque', 'disable-workspace-switcher-overlay@cleardevice', 'hibernate-status@dromi']"
 
 gsettings set org.gnome.mutter workspaces-only-on-primary false
 gsettings set org.gnome.mutter dynamic-workspaces false
@@ -54,8 +54,6 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys previous "['<Alt>comm
 
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 
-gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
-
 gsettings set org.gnome.shell.extensions.gsconnect enabled false
 
 gsettings set org.gnome.shell.extensions.dash-to-panel hide-overview-on-startup true
@@ -66,6 +64,8 @@ gsettings set org.gnome.shell.app-switcher current-workspace-only true
 gsettings set org.gnome.desktop.session idle-delay 900
 gsettings set org.gnome.desktop.screensaver lock-delay 3600
 
+gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type "'nothing'"
+gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type "'nothing'"
 
 # Prompt theme
 if test ! -e "$HOME"/.local/share/org.gnome.Prompt/palettes/lucid.palette; then

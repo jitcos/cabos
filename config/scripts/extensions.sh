@@ -24,3 +24,7 @@ cp -r gnome-disable-workspace-switcher/disable-workspace-switcher-overlay@cleard
 
 git clone https://github.com/Hexcz/Start-Overlay-in-Application-View-for-Gnome-40-.git
 cp -r Start-Overlay-in-Application-View-for-Gnome-40-/start-overlay-in-application-view@Hex_cz /usr/share/gnome-shell/extensions
+
+wget https://extensions.gnome.org/extension-data/hibernate-statusdromi.v38.shell-extension.zip
+mkdir /usr/share/gnome-shell/extensions/hibernate-status@dromi
+unzip hibernate-statusdromi.v38.shell-extension.zip -d /usr/share/gnome-shell/extensions/hibernate-status@dromi
