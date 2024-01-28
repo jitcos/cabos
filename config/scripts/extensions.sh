@@ -28,3 +28,5 @@ cp -r Start-Overlay-in-Application-View-for-Gnome-40-/start-overlay-in-applicati
 wget https://extensions.gnome.org/extension-data/hibernate-statusdromi.v38.shell-extension.zip
 mkdir /usr/share/gnome-shell/extensions/hibernate-status@dromi
 unzip hibernate-statusdromi.v38.shell-extension.zip -d /usr/share/gnome-shell/extensions/hibernate-status@dromi
+
+chmod -R 777 /usr/share/gnome-shell/extensions
