@@ -9,4 +9,5 @@ cd /tmp
 
 # Download oh-my-zsh into skel directory
 git clone https://github.com/ohmyzsh/ohmyzsh.git /usr/etc/skel/.oh-my-zsh
-cp /usr/etc/skel/.oh-my-zsh/templates/zshrc.zsh-template /usr/etc/skel/.zshrc
+mkdir -p /usr/etc/skel/.config/contexts/localhost
+cp /usr/etc/skel/.oh-my-zsh/templates/zshrc.zsh-template /usr/etc/skel/.config/contexts/localhost/.zshrc
