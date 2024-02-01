@@ -22,10 +22,14 @@ install:
   - p7zip
   - p7zip-plugins
   - podman-compose
-  - podman-docker
   - podman-plugins
   - podman-tui
   - podmansh
+  - docker-ce
+  - docker-ce-cli
+  - docker-buildx-plugin
+  - docker-compose-plugin
+  - containerd.io
   - playerctl
   - nautilus-gsconnect
   - python3-pip

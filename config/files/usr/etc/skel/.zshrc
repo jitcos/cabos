@@ -55,33 +55,42 @@ if [ -n "$CONTAINER_ID" ]; then
     source "$XDG_CONFIG_HOME/.zshrc"
   fi
 
-  db_glob_pattern="$XDG_CONFIG_HOME/config.d/*.zsh"
-
-  if stat -t "$db_glob_pattern" >/dev/null 2>&1; then
-    for conf in "$db_glob_pattern"; do
-      source "${conf}"
-    done
+  if [ -d "$XDG_CONFIG_HOME/config.d/" ]; then
+    files=("$XDG_CONFIG_HOME/config.d/"*.zsh)
+    if [ ${#files[@]} -gt 0 ]; then
+      for conf in "${files[@]}"; do
+        source "$conf"
+      done
+      unset conf
+    fi
+    unset files
   fi
 else
   # localhost
-  source "$HOME/.config/contexts/localhost/.zshrc"
+  if [ -f "$HOME/.config/contexts/localhost/.zshrc" ]; then
+    source "$HOME/.config/contexts/localhost/.zshrc"
+  fi
 
-  localhost_glob_pattern="$XDG_CONFIG_HOME/config.d/*.zsh"
-
-  if stat -t "$localhost_glob_pattern" >/dev/null 2>&1; then
-    for conf in "$localhost_glob_pattern"; do
-      source "${conf}"
-    done
-    unset conf
+  if [ -d "$HOME/.config/contexts/localhost/config.d/" ]; then
+    files=("$HOME/.config/contexts/localhost/config.d/"*.zsh)
+    if [ ${#files[@]} -gt 0 ]; then
+      for conf in "${files[@]}"; do
+        source "$conf"
+      done
+      unset conf
+    fi
+    unset files
   fi
 fi
 
 # Load seperated config files
-global_glob_pattern="$XDG_CONFIG_HOME/config.d/*.zsh"
-
-if stat -t "$global_glob_pattern" >/dev/null 2>&1; then
-  for conf in "$global_glob_pattern"; do
-    source "${conf}"
-  done
-  unset conf
+if [ -d "$HOME/.config/contexts/config.d/" ]; then
+  files=("$HOME/.config/contexts/config.d/"*.zsh)
+  if [ ${#files[@]} -gt 0 ]; then
+    for conf in "${files[@]}"; do
+      source "$conf"
+    done
+    unset conf
+  fi
+  unset files
 fi
