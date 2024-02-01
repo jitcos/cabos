@@ -13,4 +13,8 @@ rpm-ostree override replace \
       vte-profile
 rpm-ostree install prompt
 rm -f /etc/yum.repos.d/_copr_kylegospo-prompt.repo
+
 rpm-ostree uninstall gnome-extensions-app
+
+wget https://github.com/docker/compose/releases/latest/download/docker-compose-linux-x86_64 -O /tmp/docker-compose && \
+  install -c -m 0755 /tmp/docker-compose /usr/bin

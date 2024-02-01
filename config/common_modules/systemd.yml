@@ -11,5 +11,6 @@ system:
 user:
   enabled:
     - podman.socket
+    - docker.socket
     - dx-user-vscode.service
     - dx-user-gsettings.service
