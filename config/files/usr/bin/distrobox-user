@@ -5,6 +5,8 @@ set -oue pipefail
 # Run setup
 echo 'Running initial setup...'
 
+mkdir -p "$XDG_CONFIG_HOME/config.d"
+
 # Install oh-my-zsh
 ZSH="$XDG_CONFIG_HOME/oh-my-zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 

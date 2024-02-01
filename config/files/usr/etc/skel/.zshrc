@@ -16,9 +16,18 @@ if [ -n "$CONTAINER_ID" ]; then
 
   source "$XDG_CONFIG_HOME/.zshrc"
   unset SETUP_DONE
+
+  for conf in "$XDG_CONFIG_HOME/config.d/"*.zsh; do
+    source "${conf}"
+  done
 else
   # localhost
   source "$HOME/.config/contexts/localhost/.zshrc"
+
+  for conf in "$HOME/.config/contexts/localhost/config.d/"*.zsh; do
+    source "${conf}"
+  done
+  unset conf
 fi
 
 # Load seperated config files
