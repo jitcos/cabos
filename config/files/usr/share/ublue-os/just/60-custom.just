@@ -1,4 +1,3 @@
-import '100-bling.just'
 # Include some of your custom scripts here!
 
 # Configure GRUB screen with various options
