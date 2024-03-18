@@ -1,15 +1,10 @@
-# cabos
+<p align="center">
+  <img src="https://repository-images.githubusercontent.com/745253072/06f1c924-1a75-4feb-b024-90fb678ee515">
+</p>
 
-> **Warning**
-> Startingpoint was recently rewritten, and this version is considered a "1.0" *semi-*stable release.
-> There are breaking changes between this and the previous version.
-> If you are merging changes from the previous (v0) version, please refer to [the heads-up blog post](https://universal-blue.org/blog/2023/09/02/startingpoint-rewrite-heads-up-what-you-need-to-know/).
-
-[![build-ublue](https://github.com/jitcos/cabos/actions/workflows/build.yml/badge.svg)](https://github.com/jitcos/cabos/actions/workflows/build.yml)
-
-This is a constantly updating template repository for creating [a native container image](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) designed to be customized however you want. GitHub will build your image for you, and then host it for you on [ghcr.io](https://github.com/features/packages). You then just tell your computer to boot off of that image. GitHub keeps 90 days worth image backups for you, thanks Microsoft!
-
-For more info, check out the [uBlue homepage](https://universal-blue.org/) and the [main uBlue repo](https://github.com/ublue-os/main/)
+<p align="center">
+  <img src="https://github.com/jitcos/cabos/actions/workflows/build.yml/badge.svg">
+</p>
 
 ## Getting started
 

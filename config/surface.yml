@@ -1,0 +1,23 @@
+# image will be published to ghcr.io/<user>/<name>
+name: cabos-surface
+# description will be included in the image's metadata
+description: A hyper opinionated Fedora Silverblue spin aimed at creators
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/silverblue-surface
+image-version: 39 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - from-file: common_modules/signing.yml
+  - from-file: common_modules/akmods.yml
+  - from-file: common_modules/files.yml
+  - from-file: common_modules/rpm-ostree.yml
+  - from-file: common_modules/rpm-ostree-rm-nvtop.yml
+  - from-file: common_modules/bling.yml
+  - from-file: common_modules/fonts.yml
+  - from-file: common_modules/yafti.yml
+  - from-file: common_modules/default-flatpaks.yml
+  - from-file: common_modules/systemd.yml
+  - from-file: common_modules/scripts.yml

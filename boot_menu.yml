@@ -3,3 +3,34 @@ ublue_variants:
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: cabos
+        info: cabos (Default)
+  - label: jitcos/cabos-nvidia
+    ks: /kickstart/ublue-os-nvidia.ks
+    flavors:
+      - label: cabos-nvidia
+        info: cabos (For NVIDIA GPUs)
+  - label: jitcos/cabos-framework
+    ks: /kickstart/ublue-os.ks
+    flavors:
+      - label: cabos-framework
+        info: cabos (Framework Edition)
+  - label: jitcos/cabos-asus
+    ks: /kickstart/ublue-os.ks
+    flavors:
+      - label: cabos-asus
+        info: cabos (ASUS Edition)
+  - label: jitcos/cabos-asus-nvidia
+    ks: /kickstart/ublue-os-nvidia.ks
+    flavors:
+      - label: cabos-asus-nvidia
+        info: cabos (ASUS Edition for NVIDIA GPUs)
+  - label: jitcos/cabos-surface
+    ks: /kickstart/ublue-os.ks
+    flavors:
+      - label: cabos-surface
+        info: cabos (Surface Edition)
+  - label: jitcos/cabos-surface-nvidia
+    ks: /kickstart/ublue-os-nvidia.ks
+    flavors:
+      - label: cabos-surface-nvidia
+        info: cabos (Surface Edition for NVIDIA GPUs)
