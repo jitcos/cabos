@@ -53,7 +53,6 @@ remove:
   - firefox
   - firefox-langpacks
   - htop
-  - nvtop
   - gnome-software-rpm-ostree
   - gnome-tour
   - gnome-initial-setup
