@@ -96,6 +96,7 @@ screens:
             - GoLand: com.jetbrains.GoLand
             - Android Studio: com.google.AndroidStudio
             - Sublime Text: com.sublimetext.three
+            - Bruno: com.usebruno.Bruno
             - Insomnia: rest.insomnia.Insomnia
             - Postman: com.getpostman.Postman
             - Podman Desktop: io.podman_desktop.PodmanDesktop

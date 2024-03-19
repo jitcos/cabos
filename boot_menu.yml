@@ -9,11 +9,6 @@ ublue_variants:
     flavors:
       - label: cabos-nvidia
         info: cabos (For NVIDIA GPUs)
-  - label: jitcos/cabos-framework
-    ks: /kickstart/ublue-os.ks
-    flavors:
-      - label: cabos-framework
-        info: cabos (Framework Edition)
   - label: jitcos/cabos-asus
     ks: /kickstart/ublue-os.ks
     flavors:

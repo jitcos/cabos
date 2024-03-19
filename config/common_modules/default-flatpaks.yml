@@ -20,6 +20,7 @@ system:
     - com.github.tchx84.Flatseal
     - io.github.fabrialberio.pinapp
     - com.mattjakeman.ExtensionManager
+    - io.github.flattool.Warehouse
     - sa.sy.bluerecorder
     - org.mozilla.firefox
     - it.mijorus.gearlever

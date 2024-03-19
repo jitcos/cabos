@@ -24,7 +24,6 @@ jobs:
           # !! Add your recipes here
           - base.yml
           - nvidia.yml
-          - framework.yml
           - asus.yml
           - asus-nvidia.yml
           - surface.yml

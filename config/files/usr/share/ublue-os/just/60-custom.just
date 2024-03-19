@@ -42,28 +42,6 @@ configure-grub ACTION="prompt":
     fi
   fi
 
-configure-scaling ACTION="prompt":
-  #!/usr/bin/env bash
-  bold=$(tput bold)
-  normal=$(tput sgr0)
-  OPTION={{ ACTION }}
-  if [ "$OPTION" == "prompt" ]; then
-  echo "${bold}Configuring Fractional Display Scaling${normal}"
-  echo 'Enable or disable fractional display scaling? Press ESC to exit.'
-  OPTION=$(ugum choose "Enable (Default)" Disable)
-  elif [ "$OPTION" == "help" ]; then
-    echo "Usage: ujust configure-scaling <option>"
-    echo "  <option>: Specify the quick option - 'enable' or 'disable'"
-    echo "  Use 'disable' to disable fractional scaling for your user."
-    echo "  Use 'enable' to enable fractional scaling for your user."
-    exit 0
-  fi
-  if [ "$OPTION" == "Disable" ] || [ "${OPTION,,}" == "disable" ]; then
-    gsettings set org.gnome.mutter experimental-features "[]"
-  elif [ "$OPTION" == "Enable (Default)" ] || [ "${OPTION,,}" == "enable" ]; then
-    gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
-  fi
-
 enable-hibernation:
   #!/usr/bin/env bash
 
