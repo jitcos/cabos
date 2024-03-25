@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # SCRIPT VERSION
-USER_SETUP_VER=5
+USER_SETUP_VER=6
 USER_SETUP_VER_FILE="${XDG_DATA_HOME:-$HOME/.local/share}/cabos/gsettings-configured"
 
 mkdir -p "$(dirname "$USER_SETUP_VER_FILE")" || exit 1
@@ -16,7 +16,7 @@ if [[ -f $USER_SETUP_VER_FILE && "$USER_SETUP_VER" = "$USER_SETUP_VER_RAN" ]]; t
   exit 0
 fi
 
-gsettings set org.gnome.shell favorite-apps "['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.kde.konsole', 'code.desktop']"
+gsettings set org.gnome.shell favorite-apps "['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.kde.konsole.desktop', 'code.desktop']"
 gsettings set org.gnome.shell enabled-extensions "['hide-universal-access@akiirui.github.io', 'dash-to-panel@jderose9.github.com', 'blur-my-shell@aunetx', 'gsconnect@andyholmes.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 's76-scheduler@mattjakeman.com', 'caffeine@patapon.info', 'start-overlay-in-application-view@Hex_cz', 'workspace-switch-wraparound@theychx.org', 'disable-workspace-animation@ethnarque', 'disable-workspace-switcher-overlay@cleardevice', 'hibernate-status@dromi']"
 
 gsettings set org.gnome.mutter workspaces-only-on-primary false
@@ -74,7 +74,10 @@ if test ! -e "$HOME"/.local/share/org.gnome.Ptyxis/palettes/lucid.palette; then
   cp -f /etc/skel.d/.local/share/org.gnome.Ptyxis/palettes/lucid.palette "$HOME"/.local/share/org.gnome.Ptyxis/palettes
 fi
 
-dconf load / < /etc/dconf/db/local.d/01-prompt
+dconf load / < /etc/dconf/db/local.d/01-ptyxis
+
+# Sort directories first
+dconf load / < /etc/dconf/db/local.d/02-sort-folders
 
 # Prevent future executions
 echo "Writing state file"

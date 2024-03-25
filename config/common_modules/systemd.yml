@@ -14,3 +14,4 @@ user:
     - podman.socket
     - dx-user-vscode.service
     - dx-user-gsettings.service
+    - dx-user-zsh.service

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# SCRIPT VERSION
+USER_SETUP_VER=1
+USER_SETUP_VER_FILE="${XDG_DATA_HOME:-$HOME/.local/share}/cabos/zsh-configured"
+USER_SETUP_VER_RAN=$(cat "$USER_SETUP_VER_FILE")
+
+mkdir -p "$(dirname "$USER_SETUP_VER_FILE")" || exit 1
+
+# Run script if updated
+if [[ -f $USER_SETUP_VER_FILE && "$USER_SETUP_VER" = "$USER_SETUP_VER_RAN" ]]; then
+  echo "ZSH setup v$VER has already run. Exiting..."
+  exit 0
+fi
+
+# Make sure ZSH config is setup properly
+cp /usr/etc/skel/.zshrc ~/.zshrc
+
+# Prevent future executions
+echo "Writing state file"
+echo "$USER_SETUP_VER" > "$USER_SETUP_VER_FILE"
