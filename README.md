@@ -84,6 +84,8 @@ Installed flatpaks:
 * [PinApp](https://flathub.org/apps/io.github.fabrialberio.pinapp)
 * [Extension Manager](https://flathub.org/apps/com.mattjakeman.ExtensionManager)
 * [Blue Recorder](https://flathub.org/apps/sa.sy.bluerecorder)
+* [Gear Lever](https://flathub.org/apps/it.mijorus.gearlever)
+* [Konsole](https://flathub.org/apps/org.kde.konsole) Has font ligatures support
 
 Optional flatpaks at first login:
 * [Characters](https://flathub.org/apps/org.gnome.Characters)

@@ -24,6 +24,7 @@ system:
     - sa.sy.bluerecorder
     - org.mozilla.firefox
     - it.mijorus.gearlever
+    - org.kde.konsole
 user:
   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub-user
