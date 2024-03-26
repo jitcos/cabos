@@ -2,7 +2,7 @@
 
 # SCRIPT VERSION
 PLYMOUTH_SETUP_VER=1
-PLYMOUTH_SETUP_VER_FILE="/etc/ublue/dx-groups"
+PLYMOUTH_SETUP_VER_FILE="/etc/ublue/plymouth-setup"
 PLYMOUTH_SETUP_VER_RAN=$(cat "$PLYMOUTH_SETUP_VER_FILE")
 
 # Run script if updated
