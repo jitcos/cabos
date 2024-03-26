@@ -1,0 +1,51 @@
+{
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Fira Code",
+    "editor.tabSize": 2,
+    "telemetry.telemetryLevel": "off",
+    "workbench.colorTheme": "Lucid Dark",
+    "files.trimTrailingWhitespace": true,
+    "extensions.ignoreRecommendations": false,
+    "git.confirmSync": false,
+    "editor.minimap.showSlider": "always",
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "alt",
+    "files.exclude": {
+        "/.DS_Store": true,
+        "/.git": true,
+        "/.hg": true,
+        "/.svn": true,
+        "/*.min.*": true,
+        "/CVS": true,
+        "/dist": true,
+        "**/jquery*": true
+    },
+    "git.autofetch": true,
+    "update.mode": "none",
+    "editor.fontSize": 16,
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.mergeEditor": false,
+    "workbench.startupEditor": "none",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "diffEditor.codeLens": true,
+    "window.titleBarStyle": "custom",
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.enabled": false,
+    "gitlens.showWelcomeOnInstall": false,
+    "gitlens.showWhatsNewAfterUpgrades": false
+}
