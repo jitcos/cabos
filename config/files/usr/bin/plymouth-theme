@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# SCRIPT VERSION
+PLYMOUTH_SETUP_VER=1
+PLYMOUTH_SETUP_VER_FILE="/etc/ublue/dx-groups"
+PLYMOUTH_SETUP_VER_RAN=$(cat "$PLYMOUTH_SETUP_VER_FILE")
+
+# Run script if updated
+if [[ -f $PLYMOUTH_SETUP_VER_FILE && "$PLYMOUTH_SETUP_VER" = "$PLYMOUTH_SETUP_VER_RAN" ]]; then
+  echo "Plymouth setup has already run. Exiting..."
+  exit 0
+fi
+
+# Setup Plymouth
+rpm-ostree initramfs --enable
+
+# Prevent future executions
+echo "Writing state file"
+echo "$PLYMOUTH_SETUP_VER" > "$PLYMOUTH_SETUP_VER_FILE"

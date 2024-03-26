@@ -1,0 +1,12 @@
+[Unit]
+Description=Update Plymouth theme
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/plymouth-theme
+Restart=on-failure
+RestartSec=30
+StartLimitInterval=0
+
+[Install]
+WantedBy=default.target

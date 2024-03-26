@@ -3,7 +3,7 @@ Description=Add wheel members to docker
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/dx-groups
+ExecStart=/usr/bin/user-groups
 Restart=on-failure
 RestartSec=30
 StartLimitInterval=0

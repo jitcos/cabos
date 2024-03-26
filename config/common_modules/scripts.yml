@@ -4,4 +4,3 @@ scripts:
   - extra-packages.sh
   - oh-my-zsh.sh
   - extensions.sh
-  - initramfs.sh

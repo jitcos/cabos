@@ -6,11 +6,12 @@ system:
     - system76-power-wake.service
     - com.system76.Scheduler.service
     - docker.socket
-    - dx-groups.service
+    - user-groups.service
+    - plymouth-theme.service
   masked:
     - power-profiles-daemon.service
 user:
   enabled:
     - podman.socket
-    - dx-user-vscode.service
-    - dx-user-gsettings.service
+    - user-vscode.service
+    - user-gsettings.service
