@@ -15,7 +15,7 @@ mv /usr/share/gnome-shell/extensions/workspace-switch-wraparound@theychx.org/src
 rm -rf /usr/share/gnome-shell/extensions/workspace-switch-wraparound@theychx.org/src
 
 git clone https://github.com/akiirui/hide-universal-access.git /usr/share/gnome-shell/extensions/hide-universal-access@akiirui.github.io
-cd /usr/share/gnome-shell/extensions/hide-universal-access@akiirui.github.io && git checkout 45 && cd /tmp
+cd /usr/share/gnome-shell/extensions/hide-universal-access@akiirui.github.io && git checkout 45 && rm -rf .git && cd /tmp
 
 git clone https://github.com/ethnarque/gnome-disable-workspace-animation.git
 cp -r gnome-disable-workspace-animation/disable-workspace-animation@ethnarque /usr/share/gnome-shell/extensions
