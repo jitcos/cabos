@@ -14,6 +14,12 @@ cabos is inspired and borrows heavily from [Bluefin-DX](https://projectbluefin.i
 
 The main idea is to have an up-to-date, stable, and pre-configured base OS, and to use customized containers with Distrobox to do development work within it. You can see an example of a base Ubuntu container to get started with [here](https://github.com/jitcos/jetskis).
 
+ZSH is configured to use [oh-my-zsh](https://ohmyz.sh/) by default, but customizing the config has changed a little. If you use an Distrobox based on [Jetskis](https://github.com/jitcos/jetskis), you can share zsh between the two, but also have seperate options as well:
+
+By default, your new `.zshrc` config for your machine will be located at `~/.config/contexts/localhost/.zshrc`. The default config for each Distrobox will be located in `~/.config/contexts/container-name/.zshrc`. To have shared config across both localhost and Distrobox containers, create a new config ending in `.zsh` here: `~/.config/contexts/config.d/`. Please note, it is not recommended to modify the base `~/.zshrc` file since it will source the appropriate files for whatever you're running at the time.
+
+Running `SETUP_DEV_TOOLS=true distrobox enter jetskis` will setup nvm and pyenv in your container. You can modify the `~/.zshrc` file if you want to install other packages.
+
 # Modifications
 
 Removed packages (RPMs):
@@ -68,6 +74,7 @@ Installed extensions:
 Installed flatpaks:
 * [Firefox](https://flathub.org/apps/org.mozilla.firefox) from Flathub instead of the system package
 * [Mission Center](https://flathub.org/apps/io.missioncenter.MissionCenter) from Flathub instead of Gnome System Monitor
+* [Konsole](https://flathub.org/apps/org.kde.konsole) Has font ligatures support
 * [Calculator](https://apps.gnome.org/en/Calculator/)
 * [Calendar](https://apps.gnome.org/en/Calendar/)
 * [Camera](https://apps.gnome.org/en/Snapshot/)
@@ -85,7 +92,6 @@ Installed flatpaks:
 * [Extension Manager](https://flathub.org/apps/com.mattjakeman.ExtensionManager)
 * [Blue Recorder](https://flathub.org/apps/sa.sy.bluerecorder)
 * [Gear Lever](https://flathub.org/apps/it.mijorus.gearlever)
-* [Konsole](https://flathub.org/apps/org.kde.konsole) Has font ligatures support
 
 Optional flatpaks at first login:
 * [Characters](https://flathub.org/apps/org.gnome.Characters)
