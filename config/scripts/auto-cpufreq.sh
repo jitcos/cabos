@@ -9,7 +9,6 @@ cd /tmp
 
 git clone https://github.com/AdnanHodzic/auto-cpufreq.git
 cd auto-cpufreq
-rm -rf .git
 find . -type f | xargs sed -i 's/\/opt/\/usr\/etc/g'
 
 rpm-ostree install python-devel dmidecode gcc cairo-devel gobject-introspection-devel cairo-gobject-devel gtk3-devel
