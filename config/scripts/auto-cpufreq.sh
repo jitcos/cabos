@@ -9,11 +9,13 @@ cd /tmp
 
 git clone https://github.com/AdnanHodzic/auto-cpufreq.git
 cd auto-cpufreq
+rm -rf .git
+find . -type f | xargs sed -i 's/\/opt/\/usr\/etc/g'
 
 rpm-ostree install python-devel dmidecode gcc cairo-devel gobject-introspection-devel cairo-gobject-devel gtk3-devel
 
 # Setup venv
-venv_dir=/opt/auto-cpufreq/venv
+venv_dir=/usr/etc/auto-cpufreq/venv
 mkdir -p "${venv_dir}"
 python3 -m venv "${venv_dir}"
 
@@ -21,8 +23,7 @@ source "${venv_dir}/bin/activate"
 python3 -m pip install --upgrade pip wheel
 
 # Install pacakge
-git config --global --add safe.directory $(pwd)
-python -m pip install .
+python3 -m pip install .
 mkdir -p /usr/local/share/auto-cpufreq/
 cp -r scripts/ /usr/local/share/auto-cpufreq/
 cp -r images/ /usr/local/share/auto-cpufreq/
