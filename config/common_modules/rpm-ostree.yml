@@ -48,6 +48,14 @@ install:
   - qemu-user-binfmt
   - qemu-user-static
   - qemu
+  - python-devel
+  - binutils
+  - dmidecode
+  - gcc
+  - cairo-devel
+  - gobject-introspection-devel
+  - cairo-gobject-devel
+  - gtk3-devel
 
 remove:
   - firefox
