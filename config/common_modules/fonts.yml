@@ -1,7 +1,7 @@
 type: fonts
 fonts:
   google-fonts:
-    # - Roboto
-    # - Open Sans
-    # - Fira Code
-    # - JetBrains Mono
+    - Roboto
+    - Open Sans
+    - Fira Code
+    - JetBrains Mono
