@@ -1,7 +1,6 @@
 type: script
 scripts:
   - system76-scheduler.sh
-  - auto-cpufreq.sh
   - extra-packages.sh
   - oh-my-zsh.sh
   - extensions.sh
