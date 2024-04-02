@@ -37,7 +37,7 @@ Removed packages (RPMs):
 
 Installed packages (RPMs):
 * [System76 Scheduler](https://github.com/pop-os/system76-scheduler)
-* [System76 Power Management](https://github.com/pop-os/system76-power)
+* [auto-cpufreq](https://github.com/AdnanHodzic/auto-cpufreq)
 * Android Tools (adb & fastboot)
 * Zsh
 * Mosh
@@ -234,4 +234,3 @@ Optional config:
 
 # Recommended Extensions
 * [Grand Theft Focus](https://extensions.gnome.org/extension/5410/grand-theft-focus/) - Just be sure to configure Telegram/WhatsApp properly
-* [System76 Power](https://github.com/LFd3v/gnome-shell-extension-system76-power) Manually install this for support with the System76 Power service
