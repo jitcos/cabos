@@ -170,10 +170,10 @@ Settings applied by default:
 * Disabled "hot corners"
 * Disable middle-click paste
 * Enable normal "Minimize, Maximize, and Close" buttons on application windows
-* Use Alt+Left & Alt-Right to navigate workspaces
-* Use Alt+, for Previous Track
-* Use Alt+. for Next Track
-* Use Alt+/ for Play/Pause
+* Use Super+Left & Super-Right to navigate workspaces
+* Use Super+, for Previous Track
+* Use Super+. for Next Track
+* Use Super+/ for Play/Pause
 * Enabled two-finger scrolling
 * Disabled "natural" scrolling direction
 * Enabled tap-to-click
