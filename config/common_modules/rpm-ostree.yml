@@ -48,7 +48,3 @@ install:
   - binutils
   - dmidecode
   - gcc
-
-remove:
-  - htop
-  - gnome-terminal

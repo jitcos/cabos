@@ -21,4 +21,5 @@ modules:
   - from-file: common_modules/default-flatpaks.yml
   - from-file: common_modules/skel.yml
   - from-file: common_modules/scripts.yml
+  - from-file: common_modules/scripts-gnome.yml
   - from-file: common_modules/systemd.yml

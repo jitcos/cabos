@@ -3,4 +3,3 @@ scripts:
   - system76-scheduler.sh
   - extra-packages.sh
   - oh-my-zsh.sh
-  - extensions.sh
