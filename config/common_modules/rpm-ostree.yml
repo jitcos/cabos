@@ -52,4 +52,3 @@ install:
 remove:
   - htop
   - gnome-terminal
-  - gnome-terminal-nautilus
