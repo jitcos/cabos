@@ -2,30 +2,55 @@ ublue_variants:
   - label: jitcos/cabos
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: cabos
+      - label: cabos [GNOME]
         info: cabos (Default)
+  - label: jitcos/cabos-cinnamon
+    ks: /kickstart/ublue-os.ks
+    flavors:
+      - label: cabos
+        info: cabos [Cinnamon]
   - label: jitcos/cabos-nvidia
     ks: /kickstart/ublue-os-nvidia.ks
     flavors:
       - label: cabos-nvidia
-        info: cabos (For NVIDIA GPUs)
+        info: cabos [GNOME] (For NVIDIA GPUs)
+  - label: jitcos/cabos-nvidia
+    ks: /kickstart/ublue-os-nvidia.ks
+    flavors:
+      - label: cabos-cinnamon-nvidia
+        info: cabos [Cinnamon] (For NVIDIA GPUs)
   - label: jitcos/cabos-asus
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: cabos-asus
-        info: cabos (ASUS Edition)
+        info: cabos [GNOME] (ASUS Edition)
+  - label: jitcos/cabos-asus
+    ks: /kickstart/ublue-os.ks
+    flavors:
+      - label: cabos-cinnamon-asus
+        info: cabos [Cinnamon] (ASUS Edition)
   - label: jitcos/cabos-asus-nvidia
     ks: /kickstart/ublue-os-nvidia.ks
     flavors:
       - label: cabos-asus-nvidia
-        info: cabos (ASUS Edition for NVIDIA GPUs)
+        info: cabos [GNOME] (ASUS Edition for NVIDIA GPUs)
+  - label: jitcos/cabos-cinnamon-asus-nvidia
+    ks: /kickstart/ublue-os-nvidia.ks
+    flavors:
+      - label: cabos-cinnamon-asus-nvidia
+        info: cabos [Cinnamon] (ASUS Edition for NVIDIA GPUs)
   - label: jitcos/cabos-surface
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: cabos-surface
-        info: cabos (Surface Edition)
-  - label: jitcos/cabos-surface-nvidia
+        info: cabos [GNOME] (Surface Edition)
+  - label: jitcos/cabos-cinnamon-surface
+    ks: /kickstart/ublue-os.ks
+    flavors:
+      - label: cabos-surface
+        info: cabos [Cinnamon] (Surface Edition)
+  - label: jitcos/cabos-cinnamon-surface-nvidia
     ks: /kickstart/ublue-os-nvidia.ks
     flavors:
-      - label: cabos-surface-nvidia
-        info: cabos (Surface Edition for NVIDIA GPUs)
+      - label: cabos-cinnamon-surface-nvidia
+        info: cabos [Cinnamon] (Surface Edition for NVIDIA GPUs)

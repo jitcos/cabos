@@ -6,12 +6,6 @@ repos:
   - https://copr.fedorainfracloud.org/coprs/sweetbeans/cabos/repo/fedora-%OS_VERSION%/sweetbeans-cabos-fedora-%OS_VERSION%.repo
 
 install:
-  - gnome-shell-extension-caffeine
-  - gnome-shell-extension-system76-scheduler
-  - gnome-shell-extension-gsconnect
-  - gnome-shell-extension-dash-to-panel
-  - gnome-shell-extension-blur-my-shell
-  - gnome-shell-extension-appindicator
   - system76-scheduler
   - auto-cpufreq
   # - system76-power
@@ -54,24 +48,10 @@ install:
   - binutils
   - dmidecode
   - gcc
-  - cairo-devel
-  - gobject-introspection-devel
-  - cairo-gobject-devel
-  - gtk3-devel
 
 remove:
   - firefox
   - firefox-langpacks
   - htop
-  - gnome-software-rpm-ostree
-  - gnome-tour
-  - gnome-initial-setup
-  - gnome-system-monitor
-  - gnome-shell-extension-apps-menu
-  - gnome-shell-extension-launch-new-instance
-  - gnome-shell-extension-places-menu
-  - gnome-shell-extension-window-list
-  - gnome-shell-extension-background-logo
-  - gnome-classic-session
   - gnome-terminal
   - gnome-terminal-nautilus
