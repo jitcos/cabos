@@ -9,6 +9,8 @@ install:
   - gnome-shell-extension-appindicator
 
 remove:
+  - firefox
+  - firefox-langpacks
   - gnome-software-rpm-ostree
   - gnome-tour
   - gnome-initial-setup

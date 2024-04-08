@@ -50,8 +50,6 @@ install:
   - gcc
 
 remove:
-  - firefox
-  - firefox-langpacks
   - htop
   - gnome-terminal
   - gnome-terminal-nautilus
