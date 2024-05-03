@@ -24,7 +24,6 @@ Running `SETUP_DEV_TOOLS=true distrobox enter jetskis` will setup nvm and pyenv 
 
 Removed packages (RPMs):
 * Firefox
-* htop
 * nvtop (Except for Nvidia images)
 * Gnome Software rpm-ostree package (not needed since we use rpm-ostree auto-updater)
 * Gnome classic session
@@ -52,7 +51,6 @@ Installed packages (RPMs):
 * Qemu
 
 Installed akmods:
-* [V4L2-loopback](https://github.com/umlaeute/v4l2loopback) (for allowing change of behavior for universal screensharing)
 * [XOne](https://github.com/medusalix/xone) (Xbox One RF driver)
 * [XPadNeo](https://github.com/atar-axis/xpadneo) (Xbox One Bluetooth driver)
 * [WineSync](https://github.com/Cat-Lady/winesync-dkms/blob/main/README.md) (for possibly improving Windows apps performance)
@@ -170,10 +168,10 @@ Settings applied by default:
 * Disabled "hot corners"
 * Disable middle-click paste
 * Enable normal "Minimize, Maximize, and Close" buttons on application windows
-* Use Super+Left & Super-Right to navigate workspaces
-* Use Super+, for Previous Track
-* Use Super+. for Next Track
-* Use Super+/ for Play/Pause
+* Use Alt+Left & Alt-Right to navigate workspaces
+* Use Alt+, for Previous Track
+* Use Alt+. for Next Track
+* Use Alt+/ for Play/Pause
 * Enabled two-finger scrolling
 * Disabled "natural" scrolling direction
 * Enabled tap-to-click

@@ -28,8 +28,8 @@ gsettings set org.gnome.desktop.interface enable-hot-corners false
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 4
 
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Left']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Right']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Alt>Left']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Alt>Right']"
 
 gsettings set org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled true
 gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false
@@ -49,9 +49,9 @@ gsettings set org.gnome.software download-updates false
 gsettings set org.gnome.software download-updates-notify false
 gsettings set org.gnome.software packaging-format-preference "['flatpak:flathub-user']"
 
-gsettings set org.gnome.settings-daemon.plugins.media-keys next "['<Super>period']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys play "['<Super>slash']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys previous "['<Super>comma']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys next "['<Alt>period']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys play "['<Alt>slash']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys previous "['<Alt>comma']"
 
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 

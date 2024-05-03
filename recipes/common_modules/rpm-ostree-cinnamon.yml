@@ -1,0 +1,8 @@
+type: rpm-ostree
+
+install:
+  - kde-connect
+
+remove:
+  - gnome-system-monitor
+  - gnome-terminal
