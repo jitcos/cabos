@@ -20,7 +20,7 @@ modules:
     files:
       - skel: /usr/etc/skel
 
-  - from-file: rpm-ostree/rpm-ostree.yml
+  - from-file: common_modules/rpm-ostree/rpm-ostree.yml
 
   - type: default-flatpaks
     notify: true
