@@ -14,7 +14,6 @@ install:
   - p7zip
   - p7zip-plugins
   - podman-compose
-  - podman-plugins
   - podman-tui
   - podmansh
   - docker-ce
