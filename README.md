@@ -35,7 +35,6 @@ Removed packages (RPMs):
 * Gnome Terminal
 
 Installed packages (RPMs):
-* [System76 Scheduler](https://github.com/pop-os/system76-scheduler)
 * [auto-cpufreq](https://github.com/AdnanHodzic/auto-cpufreq)
 * Android Tools (adb & fastboot)
 * Zsh
@@ -53,7 +52,6 @@ Installed packages (RPMs):
 Installed akmods:
 * [XOne](https://github.com/medusalix/xone) (Xbox One RF driver)
 * [XPadNeo](https://github.com/atar-axis/xpadneo) (Xbox One Bluetooth driver)
-* [WineSync](https://github.com/Cat-Lady/winesync-dkms/blob/main/README.md) (for possibly improving Windows apps performance)
 
 Installed extensions:
 * [Blur My Shell](https://github.com/aunetx/blur-my-shell)
@@ -62,7 +60,6 @@ Installed extensions:
 * [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
 * [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)
 * [AppIndicator Support](https://extensions.gnome.org/extension/615/appindicator-support/)
-* [s76-scheduler](https://github.com/mjakeman/s76-scheduler-plugin)
 * [Start Overlay in Application View](https://github.com/Hexcz/Start-Overlay-in-Application-View-for-Gnome-40-)
 * [WorkspaceSwitcherWrapAround](https://github.com/theychx/WorkspaceSwitcherWrapAround)
 * [disable-workspace-animation](https://github.com/ethnarque/gnome-disable-workspace-animation)
@@ -88,7 +85,6 @@ Installed flatpaks:
 * [Warehouse](https://flathub.org/apps/io.github.flattool.Warehouse)
 * [PinApp](https://flathub.org/apps/io.github.fabrialberio.pinapp)
 * [Extension Manager](https://flathub.org/apps/com.mattjakeman.ExtensionManager)
-* [Blue Recorder](https://flathub.org/apps/sa.sy.bluerecorder)
 * [Gear Lever](https://flathub.org/apps/it.mijorus.gearlever)
 
 Optional flatpaks at first login:

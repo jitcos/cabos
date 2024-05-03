@@ -22,18 +22,20 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - base.yml
-          - nvidia.yml
-          - asus.yml
-          - asus-nvidia.yml
-          - surface.yml
-          - surface-nvidia.yml
-          - cinnamon.yml
-          - cinnamon-nvidia.yml
-          - cinnamon-asus.yml
-          - cinnamon-asus-nvidia.yml
-          - cinnamon-surface.yml
-          - cinnamon-surface-nvidia.yml
+          # - base.yml
+          # - nvidia.yml
+          # - asus.yml
+          # - asus-nvidia.yml
+          # - surface.yml
+          # - surface-nvidia.yml
+          # - cinnamon.yml
+          # - cinnamon-nvidia.yml
+          # - cinnamon-asus.yml
+          # - cinnamon-asus-nvidia.yml
+          # - cinnamon-surface.yml
+          # - cinnamon-surface-nvidia.yml
+          - gnome-39.yml
+          - gnome-40.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image

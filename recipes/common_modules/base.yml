@@ -1,0 +1,77 @@
+- type: bling
+  install:
+    - dconf-update-service
+
+- type: fonts
+  fonts:
+    google-fonts:
+      - Fira Code
+      - Open Sans
+      - JetBrains Mono
+      - Roboto
+
+- type: files
+  files:
+    - usr: /usr
+    - etc: /etc
+
+- type: files
+  files:
+    - skel: /usr/etc/skel
+
+- from-file: rpm-ostree/rpm-ostree.yml
+
+- type: default-flatpaks
+  notify: true
+  system:
+    repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    repo-name: flathub-system
+    repo-title: "Flathub (System)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+    install:
+      - org.gnome.Calculator
+      - org.gnome.Calendar
+      - org.gnome.Snapshot
+      - org.gnome.Contacts
+      - org.gnome.clocks
+      - org.gnome.Evince
+      - org.gnome.TextEditor
+      - org.gnome.Loupe
+      - com.github.neithern.g4music
+      - com.github.rafostar.Clapper
+      - io.missioncenter.MissionCenter
+      - com.vixalien.sticky
+      - com.github.tchx84.Flatseal
+      - io.github.fabrialberio.pinapp
+      - com.mattjakeman.ExtensionManager
+      - io.github.flattool.Warehouse
+      - sa.sy.bluerecorder
+      - org.mozilla.firefox
+      - it.mijorus.gearlever
+      - org.kde.konsole
+  user:
+    repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    repo-name: flathub-user
+    repo-title: "Flathub"
+
+- type: systemd
+  system:
+    enabled:
+      - docker.socket
+      - user-groups.service
+      - plymouth-theme.service
+      - auto-cpufreq.service
+    masked:
+      - power-profiles-daemon.service
+  user:
+    enabled:
+      - podman.socket
+      - user-vscode.service
+      - user-gsettings.service
+
+- type: script
+  scripts:
+    - extra-packages.sh
+    - oh-my-zsh.sh
+
+- type: yafti
+- type: signing

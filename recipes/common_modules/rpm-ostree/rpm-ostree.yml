@@ -1,14 +1,10 @@
 type: rpm-ostree
 repos:
-  - https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-%OS_VERSION%/kylegospo-system76-scheduler-fedora-%OS_VERSION%.repo
-  # - https://copr.fedorainfracloud.org/coprs/szydell/system76/repo/fedora-%OS_VERSION%/szydell-system76-fedora-%OS_VERSION%.repo
   - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
   - https://copr.fedorainfracloud.org/coprs/sweetbeans/cabos/repo/fedora-%OS_VERSION%/sweetbeans-cabos-fedora-%OS_VERSION%.repo
 
 install:
-  - system76-scheduler
   - auto-cpufreq
-  # - system76-power
   - android-tools
   - zsh
   - mosh

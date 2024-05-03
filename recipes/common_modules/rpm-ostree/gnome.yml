@@ -1,13 +1,5 @@
 type: rpm-ostree
 
-install:
-  - gnome-shell-extension-caffeine
-  - gnome-shell-extension-system76-scheduler
-  - gnome-shell-extension-gsconnect
-  - gnome-shell-extension-dash-to-panel
-  - gnome-shell-extension-blur-my-shell
-  - gnome-shell-extension-appindicator
-
 remove:
   - firefox
   - firefox-langpacks

@@ -1,0 +1,13 @@
+type: gnome-extensions
+install:
+  - workspace-switch-wraparoundtheychx.org.v11
+  - hide-universal-accessakiirui.github.io.v16
+  - disable-workspace-animationethnarque.v5
+  - disable-workspace-switcher-overlaycleardevice.v2
+  - start-overlay-in-application-viewHex_cz.v6
+  - hibernate-statusdromi.v38
+  - caffeinepatapon.info.v54
+  - gsconnectandyholmes.github.io.v56
+  - dash-to-paneljderose9.github.com.v60
+  - blur-my-shellaunetx.v58
+  - appindicatorsupportrgcjonas.gmail.com.v58
