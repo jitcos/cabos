@@ -12,6 +12,7 @@ image-version: 39 # latest is also supported if you want new updates ASAP
 modules:
   - from-file: common_modules/akmods/akmods.yml
   - from-file: common_modules/base.yml
-  - from-file: common_modules/rpm-ostree/gnome.yml
+  - from-file: common_modules/rpm-ostree/gnome-base.yml
+  - from-file: common_modules/rpm-ostree/gnome-39.yml
   - from-file: common_modules/rpm-ostree/rm-nvtop.yml
   - from-file: common_modules/gnome-extensions/39.yml
