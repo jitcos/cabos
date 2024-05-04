@@ -86,9 +86,10 @@ picture-uri='file:///usr/share/backgrounds/RockyMountain/RockyMountain2.jpg'
 [org.cinnamon]
 workspace-osd-visible=false
 favorite-apps=['cinnamon-settings.desktop', 'nemo.desktop', 'org.kde.konsole.desktop:flatpak']
+panels-height=['1:50']
+
 [org.cinnamon.muffin]
 workspace-cycle=true
-panels-height=['1:50']
 
 [org.cinnamon.desktop.interface]
 text-scaling-factor=1.5
