@@ -20,7 +20,7 @@ dynamic-workspaces=false
 gtk-enable-primary-paste=false
 enable-hot-corners=false
 text-scaling-factor=1.5
-color-scheme="'prefer-dark'"
+color-scheme="prefer-dark"
 
 [org.gnome.desktop.wm.preferences]
 button-layout=":minimize,maximize,close"
@@ -51,16 +51,6 @@ previous="['<Alt>comma']"
 [org.gnome.settings-daemon.plugins.color]
 night-light-enabled=true
 
-[org.gnome.Shell.Extensions.GSConnect]
-enabled=false
-
-[org.gnome.shell.extensions.dash-to-panel]
-hide-overview-on-startup=true
-isolate-workspaces=true
-
-[org.gnome.shell.app-switcher]
-current-workspace-only=true
-
 [org.gnome.desktop.session]
 idle-delay=900
 
@@ -68,19 +58,5 @@ idle-delay=900
 lock-delay=3600
 
 [org.gnome.settings-daemon.plugins.power]
-sleep-inactive-ac-type="'nothing'"
-sleep-inactive-battery-type="'nothing'"
-
-[org/gnome/Ptyxis]
-restore-session=false
-restore-window-size=false
-audible-bell=false
-visual-bell=false
-use-system-font=false
-font-name='Fira Code 10'
-profile-uuids=['2871e8027773ae74d6c87a5f659bbc74']
-default-profile-uuid='2871e8027773ae74d6c87a5f659bbc74'
-
-[org/gnome/Ptyxis/Profiles/2871e8027773ae74d6c87a5f659bbc74]
-palette='lucid'
-label='Default'
+sleep-inactive-ac-type="nothing"
+sleep-inactive-battery-type="nothing"

@@ -1,0 +1,12 @@
+[org.gnome.shell]
+favorite-apps="['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.kde.konsole.desktop', 'code.desktop']"
+
+[org.gnome.shell.Extensions.GSConnect]
+enabled=false
+
+[org.gnome.shell.extensions.dash-to-panel]
+hide-overview-on-startup=true
+isolate-workspaces=true
+
+[org.gnome.shell.app-switcher]
+current-workspace-only=true
