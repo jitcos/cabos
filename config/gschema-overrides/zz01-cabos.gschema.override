@@ -4,7 +4,7 @@ sort-directories-first=true
 [org.gtk.Settings.FileChooser]
 sort-directories-first=true
 
-[org/gnome/desktop/peripherals/touchpad]
+[org.gnome.desktop.peripherals.touchpad]
 tap-to-click=true
 two-finger-scrolling-enabled=true
 natural-scroll=false
@@ -45,7 +45,7 @@ packaging-format-preference=['flatpak:flathub-user']
 
 [org.gnome.settings-daemon.plugins.media-keys]
 next=['<Alt>period']
-play=['<Alt>slash']"
+play=['<Alt>slash']
 previous=['<Alt>comma']
 
 [org.gnome.settings-daemon.plugins.color]
