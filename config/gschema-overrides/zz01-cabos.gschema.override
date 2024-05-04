@@ -27,8 +27,8 @@ button-layout=":minimize,maximize,close"
 num-workspaces=4
 
 [org.gnome.desktop.wm.keybindings]
-switch-to-workspace-left="['<Alt>Left']"
-switch-to-workspace-right="['<Alt>Right']"
+switch-to-workspace-left=['<Alt>Left']
+switch-to-workspace-right=['<Alt>Right']
 
 [org.gnome.desktop.background]
 picture-options=zoom
@@ -41,12 +41,12 @@ secondary-color='000000'
 allow-updates=false
 download-updates=false
 download-updates-notify=false
-packaging-format-preference="['flatpak:flathub-user']"
+packaging-format-preference=['flatpak:flathub-user']
 
 [org.gnome.settings-daemon.plugins.media-keys]
-next="['<Alt>period']"
-play="['<Alt>slash']"
-previous="['<Alt>comma']"
+next=['<Alt>period']
+play=['<Alt>slash']"
+previous=['<Alt>comma']
 
 [org.gnome.settings-daemon.plugins.color]
 night-light-enabled=true
@@ -60,3 +60,16 @@ lock-delay=3600
 [org.gnome.settings-daemon.plugins.power]
 sleep-inactive-ac-type="nothing"
 sleep-inactive-battery-type="nothing"
+
+[org.gnome.shell]
+favorite-apps=['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.kde.konsole.desktop', 'code.desktop']
+
+[org.gnome.shell.Extensions.GSConnect]
+enabled=false
+
+[org.gnome.shell.extensions.dash-to-panel]
+hide-overview-on-startup=true
+isolate-workspaces=true
+
+[org.gnome.shell.app-switcher]
+current-workspace-only=true
