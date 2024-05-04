@@ -1,0 +1,3 @@
+type: gschema-overrides
+include:
+  - zz99-extensions-40.override

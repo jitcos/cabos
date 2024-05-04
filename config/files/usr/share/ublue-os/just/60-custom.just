@@ -119,5 +119,9 @@ enable-hibernation:
   echo 'HandleLidSwitch=suspend-then-hibernate' | sudo tee -a /etc/systemd/logind.conf
   echo 'HandleLidSwitchExternalPower=suspend-then-hibernate' | sudo tee -a /etc/systemd/logind.conf
 
+  dconf write /org/gnome/shell/extensions/hibernate-status-button/show-hibernate true
+  dconf write /org/gnome/shell/extensions/hibernate-status-button/show-hybrid-sleep false
+  dconf write /org/gnome/shell/extensions/hibernate-status-button/show-suspend-then-hibernate true
+
   echo "$HIBERNATION_SETUP_VER" | sudo tee "$HIBERNATION_SETUP_VER_FILE"
   echo 'All done! Please reboot to enable the changes.'

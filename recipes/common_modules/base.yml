@@ -67,7 +67,6 @@ modules:
       enabled:
         - podman.socket
         - user-vscode.service
-        - user-gsettings.service
 
   - type: script
     scripts:

@@ -1,0 +1,2 @@
+[org.gnome.shell]
+enabled-extensions="['hide-universal-access@akiirui.github.io', 'dash-to-panel@jderose9.github.com', 'blur-my-shell@aunetx', 'gsconnect@andyholmes.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 'caffeine@patapon.info', 'disable-workspace-animation@ethnarque', 'disable-workspace-switcher-overlay@cleardevice', 'hibernate-status@dromi', 'grand-theft-focus@zalckos.github.com']"

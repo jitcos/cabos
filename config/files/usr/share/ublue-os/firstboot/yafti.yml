@@ -76,10 +76,10 @@ screens:
           default: false
           packages:
             - Brave: com.brave.Browser
-            - GNOME Web: org.gnome.Epiphany
+            - Chromium: org.chromium.Chromium
             - Google Chrome: com.google.Chrome
             - Microsoft Edge: com.microsoft.Edge
-            - Opera: com.opera.Opera
+            - GNOME Web: org.gnome.Epiphany
         Development:
           description: Development tools and IDEs.
           default: false
