@@ -1,8 +1,4 @@
 modules:
-  - type: bling
-    install:
-      - dconf-update-service
-
   - type: fonts
     fonts:
       google-fonts:
@@ -45,7 +41,6 @@ modules:
         - io.github.fabrialberio.pinapp
         - com.mattjakeman.ExtensionManager
         - io.github.flattool.Warehouse
-        - sa.sy.bluerecorder
         - org.mozilla.firefox
         - it.mijorus.gearlever
         - org.kde.konsole

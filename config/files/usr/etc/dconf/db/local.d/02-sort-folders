@@ -1,5 +1,0 @@
-[org.gtk.gtk4.Settings.FileChooser]
-sort-directories-first=true
-
-[org.gtk.Settings.FileChooser]
-sort-directories-first=true

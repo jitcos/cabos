@@ -80,6 +80,47 @@ sort-directories-first=true
 [org.gtk.Settings.FileChooser]
 sort-directories-first=true
 
+[org.cinnamon.desktop.background]
+picture-uri='file:///usr/share/backgrounds/RockyMountain/RockyMountain2.jpg'
+
+[org.cinnamon]
+workspace-osd-visible=false
+favorite-apps=['cinnamon-settings.desktop', 'nemo.desktop', 'org.kde.konsole.desktop:flatpak']
+[org.cinnamon.muffin]
+workspace-cycle=true
+panels-height=['1:50']
+
+[org.cinnamon.desktop.interface]
+text-scaling-factor=1.5
+
+[org.cinnamon.desktop.peripherals.touchpad]
+natural-scroll=false
+disable-while-typing=true
+tap-to-click=true
+
+[org.cinnamon.desktop.peripherals.mouse]
+natural-scroll=false
+
+[org.cinnamondesktop.keybindings.media-keys]
+play=['XF86AudioPlay', '<Alt>slash']
+previous=['XF86AudioPrev', '<Alt>comma']
+next=['XF86AudioNext', '<Alt>period']
+
+[org.cinnamon.desktop.keybindings.wm]
+switch-to-workspace-right=['<Alt>Right']
+switch-to-workspace-left=['<Alt>Left']
+
+[org.cinnamon.sounds]
+login-enabled=false
+logout-enabled=false
+switch-enabled=false
+map-enabled=false
+close-enabled=false
+minimize-enabled=false
+maximize-enabled=false
+unmaximize-enabled=false
+tile-enabled=false
+
 [org.gnome.Ptyxis]
 restore-session=false
 restore-window-size=false
