@@ -11,7 +11,6 @@ image-version: 40 # latest is also supported if you want new updates ASAP
 # you can include multiple instances of the same module
 modules:
   - from-file: common_modules/akmods/base.yml
-  - from-file: common_modules/rpm-ostree/gnome-40.yml
   - from-file: common_modules/base.yml
   - from-file: common_modules/rpm-ostree/gnome-base.yml
   - from-file: common_modules/rpm-ostree/cinnamon.yml
