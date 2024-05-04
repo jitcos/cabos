@@ -12,7 +12,6 @@ image-version: 40 # latest is also supported if you want new updates ASAP
 modules:
   - from-file: common_modules/akmods/base.yml
   - from-file: common_modules/base.yml
-  - from-file: common_modules/rpm-ostree/gnome-base.yml
   - from-file: common_modules/rpm-ostree/cinnamon.yml
   - from-file: common_modules/rpm-ostree/rm-nvtop.yml
   - from-file: common_modules/gschema/base.yml
