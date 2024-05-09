@@ -5,7 +5,7 @@ on:
       - ".github/workflows/release-iso-40.yml"
   workflow_dispatch:
 
-name: release-iso
+name: release-iso-40
 jobs:
   release-iso:
     name: Generate and Release ISOs
