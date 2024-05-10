@@ -11,9 +11,7 @@ modules:
     files:
       - usr: /usr
       - etc: /etc
-
-  - type: files
-    files:
+      - var: /var
       - skel: /usr/etc/skel
 
   - from-file: common_modules/rpm-ostree/rpm-ostree.yml
