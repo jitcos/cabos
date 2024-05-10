@@ -56,14 +56,10 @@ Installed akmods:
 Installed extensions:
 * [Blur My Shell](https://github.com/aunetx/blur-my-shell)
 * [Caffeine](https://github.com/eonpatapon/gnome-shell-extension-caffeine)
-* [Hide Universal Access](https://extensions.gnome.org/extension/2398/hide-universal-access/)
+* [Just Perfect](https://extensions.gnome.org/extension/3843/just-perfection/)
 * [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
 * [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)
 * [AppIndicator Support](https://extensions.gnome.org/extension/615/appindicator-support/)
-* [Start Overlay in Application View](https://github.com/Hexcz/Start-Overlay-in-Application-View-for-Gnome-40-)
-* [WorkspaceSwitcherWrapAround](https://github.com/theychx/WorkspaceSwitcherWrapAround)
-* [disable-workspace-animation](https://github.com/ethnarque/gnome-disable-workspace-animation)
-* [disable-workspace-switcher](https://github.com/cleardevice/gnome-disable-workspace-switcher)
 * [Hibernate Status Button](https://extensions.gnome.org/extension/755/hibernate-status-button/)
 
 Installed flatpaks:
@@ -225,6 +221,3 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/jitcos/cabos:20230403
 Optional config:
 * `ujust configure-grub`: Hide GRUB text output on boot (if you want to make boot process faster [press Shift on boot if you need to see boot menu])
 * `ujust enable-hibernation`: Setup new swapfile and change configurations to allow your computer to hibernate or suspend-to-hibernate
-
-# Recommended Extensions
-* [Grand Theft Focus](https://extensions.gnome.org/extension/5410/grand-theft-focus/) - Just be sure to configure Telegram/WhatsApp properly

@@ -71,6 +71,15 @@ enabled=false
 hide-overview-on-startup=true
 isolate-workspaces=true
 
+[org.gnome.shell.extensions.just-perfection]
+workspace-wrap-around=true
+workspace-popup=false
+window-demands-attention-focus=true
+world-clock=false
+keyboard-layout=false
+accessibility-menu=false
+startup-status=0
+
 [org.gnome.shell.app-switcher]
 current-workspace-only=true
 
