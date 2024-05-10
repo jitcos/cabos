@@ -44,6 +44,7 @@ modules:
         - org.mozilla.firefox
         - it.mijorus.gearlever
         - org.kde.konsole
+        - com.github.d4nj1.tlpui
     user:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub-user
@@ -55,7 +56,8 @@ modules:
         - docker.socket
         - user-groups.service
         - plymouth-theme.service
-        - auto-cpufreq.service
+        - tlp.service
+        # - auto-cpufreq.service
       masked:
         - power-profiles-daemon.service
     user:
