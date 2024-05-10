@@ -11,7 +11,6 @@ modules:
     files:
       - usr: /usr
       - etc: /etc
-      - var: /var
       - skel: /usr/etc/skel
 
   - from-file: common_modules/rpm-ostree/rpm-ostree.yml
@@ -36,7 +35,6 @@ modules:
         - io.missioncenter.MissionCenter
         - com.vixalien.sticky
         - com.github.tchx84.Flatseal
-        - io.github.fabrialberio.pinapp
         - com.mattjakeman.ExtensionManager
         - io.github.flattool.Warehouse
         - org.mozilla.firefox
