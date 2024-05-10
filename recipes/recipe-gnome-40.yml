@@ -17,4 +17,3 @@ modules:
   - from-file: common_modules/rpm-ostree/rm-nvtop.yml
   - from-file: common_modules/gnome-extensions/40.yml
   - from-file: common_modules/gschema/base.yml
-  - from-file: common_modules/gschema/40.yml
