@@ -1,4 +1,11 @@
 {
+  "menu-custom": {
+    "type": "switch",
+    "default": false,
+    "description": "Use a custom icon and label",
+    "tooltip": "Check this to specify a custom icon and label",
+    "value": true
+  },
   "menu-icon": {
     "type": "iconfilechooser",
     "default": "cinnamon-symbolic",
@@ -18,5 +25,13 @@
     "description": "Icon size",
     "dependency": "menu-custom",
     "value": 40.0
+  },
+  "menu-label": {
+    "type": "entry",
+    "default": "Menu",
+    "description": "Text",
+    "tooltip": "Enter custom text to show in the panel.",
+    "dependency": "menu-custom",
+    "value": ""
   }
 }
