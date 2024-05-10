@@ -20,6 +20,7 @@ dynamic-workspaces=false
 gtk-enable-primary-paste=false
 enable-hot-corners=false
 text-scaling-factor=1.5
+scaling-factor=1
 color-scheme="prefer-dark"
 
 [org.gnome.desktop.wm.preferences]
@@ -95,7 +96,7 @@ picture-uri='file:///usr/share/backgrounds/RockyMountain/RockyMountain2.jpg'
 
 [org.cinnamon]
 workspace-osd-visible=false
-favorite-apps=['cinnamon-settings.desktop', 'nemo.desktop', 'org.kde.konsole.desktop:flatpak']
+favorite-apps=['cinnamon-settings.desktop', 'nemo.desktop', 'org.kde.konsole.desktop:flatpak', 'org.mozilla.firefox.desktop:flatpak']
 panels-height=['1:50']
 
 [org.cinnamon.muffin]
@@ -103,6 +104,8 @@ workspace-cycle=true
 
 [org.cinnamon.desktop.interface]
 text-scaling-factor=1.5
+scaling-factor=1
+gtk-enable-primary-paste=false
 
 [org.cinnamon.desktop.peripherals.touchpad]
 natural-scroll=false
@@ -121,6 +124,9 @@ next=['XF86AudioNext', '<Alt>period']
 switch-to-workspace-right=['<Alt>Right']
 switch-to-workspace-left=['<Alt>Left']
 
+[org.cinnamon.settings-daemon.plugins.xsettings]
+overrides=[{'Gdk/WindowScalingFactor', <1>}]
+
 [org.cinnamon.sounds]
 login-enabled=false
 logout-enabled=false
@@ -130,6 +136,7 @@ close-enabled=false
 minimize-enabled=false
 maximize-enabled=false
 unmaximize-enabled=false
+notification-enabled=false
 tile-enabled=false
 
 [org.gnome.Ptyxis]

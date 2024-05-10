@@ -1,0 +1,22 @@
+{
+  "menu-icon": {
+    "type": "iconfilechooser",
+    "default": "cinnamon-symbolic",
+    "description": "Icon",
+    "tooltip": "Select an icon to show in the panel.",
+    "default_icon": "cinnamon-symbolic",
+    "dependency": "menu-custom",
+    "value": "view-app-grid-symbolic"
+  },
+  "menu-icon-size": {
+    "type": "spinbutton",
+    "default": 32,
+    "min": 16,
+    "max": 96,
+    "step": 1,
+    "units": "px",
+    "description": "Icon size",
+    "dependency": "menu-custom",
+    "value": 40.0
+  }
+}

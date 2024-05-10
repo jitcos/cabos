@@ -50,6 +50,7 @@ Installed packages (RPMs):
 * Qemu
 
 Installed akmods:
+* [v4l2loopback](https://github.com/umlaeute/v4l2loopback)
 * [XOne](https://github.com/medusalix/xone) (Xbox One RF driver)
 * [XPadNeo](https://github.com/atar-axis/xpadneo) (Xbox One Bluetooth driver)
 
