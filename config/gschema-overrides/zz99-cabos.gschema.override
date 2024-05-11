@@ -64,7 +64,7 @@ sleep-inactive-battery-type="nothing"
 
 [org.gnome.shell]
 favorite-apps=['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.kde.konsole.desktop', 'code.desktop']
-enabled-extensions=['dash-to-panel@jderose9.github.com', 'blur-my-shell@aunetx', 'gsconnect@andyholmes.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 'caffeine@patapon.info', 'hibernate-status@dromi', 'just-perfection-desktop@just-perfection']
+enabled-extensions=['disable-workspace-animation@ethnarque', 'dash-to-panel@jderose9.github.com', 'blur-my-shell@aunetx', 'gsconnect@andyholmes.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 'caffeine@patapon.info', 'hibernate-status@dromi', 'just-perfection-desktop@just-perfection']
 
 [org.gnome.shell.Extensions.GSConnect]
 enabled=false
