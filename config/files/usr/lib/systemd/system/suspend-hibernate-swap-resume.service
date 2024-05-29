@@ -1,0 +1,11 @@
+[Unit]
+Description=Disable swapfile after resuming from hibernation during suspend-then-hibernate
+After=suspend-then-hibernate.target
+
+[Service]
+User=root
+Type=oneshot
+ExecStart=/usr/sbin/swapoff /var/swap/swapfile
+
+[Install]
+WantedBy=suspend-then-hibernate.target

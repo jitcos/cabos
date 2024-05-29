@@ -1,0 +1,11 @@
+[Unit]
+Description=Enable swap file and disable zram before hibernate
+Before=systemd-hibernate.service
+
+[Service]
+User=root
+Type=oneshot
+ExecStart=/usr/sbin/swapon /var/swap/swapfile
+
+[Install]
+WantedBy=systemd-hibernate.service

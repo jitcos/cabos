@@ -53,6 +53,11 @@ modules:
         - user-groups.service
         - plymouth-theme.service
         - tlp.service
+        - boot-swap.service
+        - hibernate-swap.service
+        - hibernate-swap-resume.service
+        - suspend-hibernate-swap.service
+        - suspend-hibernate-swap-resume.service
         # - auto-cpufreq.service
       masked:
         - power-profiles-daemon.service

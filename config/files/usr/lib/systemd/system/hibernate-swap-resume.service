@@ -1,0 +1,11 @@
+[Unit]
+Description=Disable swap after resuming from hibernation
+After=hibernate.target
+
+[Service]
+User=root
+Type=oneshot
+ExecStart=/usr/sbin/swapoff /var/swap/swapfile
+
+[Install]
+WantedBy=hibernate.target

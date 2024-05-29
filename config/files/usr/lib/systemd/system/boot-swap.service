@@ -1,0 +1,10 @@
+[Unit]
+Description=Disable swapfile at boot
+Before=swap.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c '[ -f /var/swap/swapfile ] && /usr/sbin/swapoff /var/swap/swapfile'
+
+[Install]
+WantedBy=multi-user.target
