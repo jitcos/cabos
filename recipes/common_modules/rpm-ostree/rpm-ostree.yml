@@ -43,5 +43,5 @@ install:
   - binutils
   - dmidecode
   - gcc
-  - tlp
-  - tlp-rdw
+  # - tlp
+  # - tlp-rdw
