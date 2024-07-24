@@ -9,12 +9,9 @@ modules:
 
   - type: files
     files:
-      - source: system/etc
-      destination: /etc
-      - source: system/usr
-      destination: /usr
-      - source: system/skel
-      destination: /usr/etc/skel
+      - usr: /usr
+      - etc: /etc
+      - skel: /usr/etc/skel
 
   - from-file: common_modules/rpm-ostree/rpm-ostree.yml
 
