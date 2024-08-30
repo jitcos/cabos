@@ -43,7 +43,7 @@ modules:
         - org.mozilla.firefox
         - it.mijorus.gearlever
         - org.kde.konsole
-        - com.github.d4nj1.tlpui
+        # - com.github.d4nj1.tlpui
     user:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub-user
