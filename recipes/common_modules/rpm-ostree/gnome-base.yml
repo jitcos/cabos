@@ -3,8 +3,8 @@ type: rpm-ostree
 remove:
   - firefox
   - firefox-langpacks
-  - gnome-terminal
-  - gnome-terminal-nautilus
+  # - gnome-terminal
+  # - gnome-terminal-nautilus
   # - gnome-software-rpm-ostree
   - gnome-tour
   - gnome-initial-setup
