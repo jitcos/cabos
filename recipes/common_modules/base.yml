@@ -43,7 +43,6 @@ modules:
         - org.mozilla.firefox
         - it.mijorus.gearlever
         - org.kde.konsole
-        # - com.github.d4nj1.tlpui
     user:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub-user
@@ -55,15 +54,14 @@ modules:
         - docker.socket
         - user-groups.service
         - plymouth-theme.service
-        # - tlp.service
         - boot-swap.service
         - hibernate-swap.service
         - hibernate-swap-resume.service
         - suspend-hibernate-swap.service
         - suspend-hibernate-swap-resume.service
-        - auto-cpufreq.service
+        # - auto-cpufreq.service
       masked:
-        - power-profiles-daemon.service
+        # - power-profiles-daemon.service
     user:
       enabled:
         - podman.socket

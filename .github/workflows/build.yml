@@ -22,30 +22,31 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe-cinnamon-39.yml
-          - recipe-cinnamon-40.yml
-          - recipe-cinnamon-nvidia-39.yml
-          - recipe-cinnamon-nvidia-40.yml
-          - recipe-cinnamon-asus-39.yml
-          - recipe-cinnamon-asus-40.yml
-          - recipe-cinnamon-asus-nvidia-39.yml
-          - recipe-cinnamon-asus-nvidia-40.yml
-          - recipe-cinnamon-surface-39.yml
-          - recipe-cinnamon-surface-40.yml
-          - recipe-cinnamon-surface-nvidia-39.yml
-          - recipe-cinnamon-surface-nvidia-40.yml
-          - recipe-gnome-39.yml
-          - recipe-gnome-40.yml
-          - recipe-gnome-nvidia-39.yml
-          - recipe-gnome-nvidia-40.yml
-          - recipe-gnome-asus-39.yml
-          - recipe-gnome-asus-40.yml
-          - recipe-gnome-asus-nvidia-39.yml
-          - recipe-gnome-asus-nvidia-40.yml
-          - recipe-gnome-surface-39.yml
-          - recipe-gnome-surface-40.yml
-          - recipe-gnome-surface-nvidia-39.yml
-          - recipe-gnome-surface-nvidia-40.yml
+          # - recipe-cinnamon-39.yml
+          # - recipe-cinnamon-40.yml
+          # - recipe-cinnamon-nvidia-39.yml
+          # - recipe-cinnamon-nvidia-40.yml
+          # - recipe-cinnamon-asus-39.yml
+          # - recipe-cinnamon-asus-40.yml
+          # - recipe-cinnamon-asus-nvidia-39.yml
+          # - recipe-cinnamon-asus-nvidia-40.yml
+          # - recipe-cinnamon-surface-39.yml
+          # - recipe-cinnamon-surface-40.yml
+          # - recipe-cinnamon-surface-nvidia-39.yml
+          # - recipe-cinnamon-surface-nvidia-40.yml
+          # - recipe-gnome-39.yml
+          # - recipe-gnome-40.yml
+          - recipe-gnome-41.yml
+          # - recipe-gnome-nvidia-39.yml
+          # - recipe-gnome-nvidia-40.yml
+          # - recipe-gnome-asus-39.yml
+          # - recipe-gnome-asus-40.yml
+          # - recipe-gnome-asus-nvidia-39.yml
+          # - recipe-gnome-asus-nvidia-40.yml
+          # - recipe-gnome-surface-39.yml
+          # - recipe-gnome-surface-40.yml
+          # - recipe-gnome-surface-nvidia-39.yml
+          # - recipe-gnome-surface-nvidia-40.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image

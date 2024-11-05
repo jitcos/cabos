@@ -1,0 +1,11 @@
+type: gnome-extensions
+install:
+  - just-perfection-desktopjust-perfection.v30
+  - hibernate-statusdromi.v41
+  - caffeinepatapon.info.v55
+  - gsconnectandyholmes.github.io.v58
+  - dash-to-paneljderose9.github.com.v64
+  - blur-my-shellaunetx.v67
+  - appindicatorsupportrgcjonas.gmail.com.v59
+  - disable-workspace-animationethnarque.v6
+  - power-profile-switchereliapasquali.github.io.v20
