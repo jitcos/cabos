@@ -1,3 +1,6 @@
+# *NOTICE*
+The owner of this repository has passed away and this project is no longer being maintained. The repo will remain intact for now, but will likely be archived in the future.
+
 <p align="center">
   <img src="https://repository-images.githubusercontent.com/745253072/06f1c924-1a75-4feb-b024-90fb678ee515">
 </p>
